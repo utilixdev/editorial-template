@@ -9,13 +9,21 @@ const playfair = Playfair_Display({
 
 const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--__font-geist-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Atelier | Clínica de Medicina i Estètica Avançada",
-  description: "Boutique mèdica a Barcelona dedicada a l'excel·lència i la precisió estètica.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  title: "Atelier | Clínica de Medicina Estética de Alta Gama",
+  description: "Boutique médica dedicada a la excelencia, la precisión estética y el bienestar exclusivo.",
+  keywords: ["medicina estética lujo", "clínica boutique", "estética avanzada", "Atelier"],
+  authors: [{ name: "Atelier" }],
+  // Això farà que es vegi bé en xarxes socials
+  openGraph: {
+    title: "Atelier | Medicina Estética de Alta Gama",
+    description: "Espacio boutique dedicado a la excelencia y la precisión estética.",
+    type: "website",
+    locale: "es_ES",
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ca" className={`${playfair.variable} ${geist.variable} scroll-smooth`}>
-      <body className="antialiased bg-[#FAF9F6] selection:bg-[#B59E85]/20">
-        {/* El Navigation es podria posar aquí si vols que sigui persistent 
-            sense carregar-se cada cop a les pàgines internes */}
+    <html lang="es" className={`${playfair.variable} ${geist.variable} scroll-smooth`}>
+      <body className="antialiased bg-[#FAF9F6] text-[#1a1a1a] selection:bg-[#B59E85]/20">
         {children}
       </body>
     </html>
