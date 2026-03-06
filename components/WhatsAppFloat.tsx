@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export default function WhatsAppFloat() {
   return (
     <motion.a
-      href="https://wa.me/34711556444?text=Hola%20UtiLiX,%20he%20vist%20la%20vostra%20proposta%20digital%20i%20m'interessa."
+      // Mensaje actualizado en castellano: "Hola UtiLiX, he visto vuestra propuesta digital y me interesa."
+      href="https://wa.me/34711556444?text=Hola%20UtiLiX,%20he%20visto%20vuestra%20propuesta%20digital%20y%20me%20interesa."
       target="_blank"
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
@@ -12,12 +13,12 @@ export default function WhatsAppFloat() {
       whileHover={{ scale: 1.05 }}
       className="fixed bottom-10 right-10 z-50 flex items-center gap-4 group"
     >
-      {/* Text que apareix al fer hover */}
-      <span className="bg-[#1A1A1A] text-[#FAF9F6] text-[9px] uppercase tracking-[0.4em] px-6 py-3 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+      {/* Texto de ayuda que aparece al hacer hover: Traducido al castellano */}
+      <span className="bg-[#1A1A1A] text-[#FAF9F6] text-[9px] uppercase tracking-[0.4em] px-6 py-3 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none shadow-2xl">
         ¿Hablamos?
       </span>
 
-      {/* El Cercle: En lloc de verd, el fem Negre o Daurat */}
+      {/* El Círculo: Mantiene el diseño minimalista en Negro y Dorado al pasar el ratón */}
       <div className="w-14 h-14 bg-[#1A1A1A] rounded-full flex items-center justify-center border border-[#FAF9F6]/10 shadow-2xl transition-colors group-hover:bg-[#B59E85]">
         <svg 
           viewBox="0 0 24 24" 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // Importamos Viewport
 import { Playfair_Display, Geist } from "next/font/google";
 import "./globals.css";
 
@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 
 const geist = Geist({
   subsets: ["latin"],
-  variable: "--__font-geist-sans",
+  variable: "--font-geist", // Corregido el nombre de la variable
 });
 
 export const metadata: Metadata = {
@@ -17,13 +17,20 @@ export const metadata: Metadata = {
   description: "Boutique médica dedicada a la excelencia, la precisión estética y el bienestar exclusivo.",
   keywords: ["medicina estética lujo", "clínica boutique", "estética avanzada", "Atelier"],
   authors: [{ name: "Atelier" }],
-  // Això farà que es vegi bé en xarxes socials
   openGraph: {
     title: "Atelier | Medicina Estética de Alta Gama",
     description: "Espacio boutique dedicado a la excelencia y la precisión estética.",
     type: "website",
     locale: "es_ES",
   },
+};
+
+// BLOQUE CRÍTICO: Evita que el iPhone haga zoom al clicar inputs
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

@@ -22,13 +22,13 @@ export default function Philosophy({ isLanding = false }: { isLanding?: boolean 
           className="flex items-center justify-center gap-3 md:gap-6 mb-12 md:mb-20"
         >
           <div className="w-6 md:w-12 h-[0.5px] bg-[#B59E85]/30" />
-          <span className="text-[#B59E85] text-[8px] md:text-[10px] uppercase tracking-[0.5em] font-medium whitespace-nowrap">
-            {isLanding ? "El método UtiLiX" : "Nuestro compromiso"}
+          <span className="text-[#B59E85] text-[8px] md:text-[10px] uppercase tracking-[0.5em] font-bold whitespace-nowrap">
+            {isLanding ? "Manifiesto UtiLiX" : "Nuestro compromiso"}
           </span>
           <div className="w-6 md:w-12 h-[0.5px] bg-[#B59E85]/30" />
         </motion.div>
 
-        {/* La Cita */}
+        {/* La Cita: REESCRITURA TIER 1 */}
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,8 +38,8 @@ export default function Philosophy({ isLanding = false }: { isLanding?: boolean 
         >
           {isLanding ? (
             <>
-              La estética no se impone, <br className="hidden sm:block" />
-            es la <span className="text-[#B59E85] opacity-90">consecuencia</span> de un equilibrio <br className="sm:hidden" /> entre ciencia y una técnica <span className="not-italic opacity-30">imperceptible."</span>
+              "La confianza no se pide, <br className="hidden sm:block" />
+              se <span className="text-[#B59E85] opacity-90">construye</span> a través de un estándar <br className="sm:hidden" /> visual que no admite <span className="not-italic opacity-30">concesiones."</span>
             </>
           ) : (
             <>
@@ -61,19 +61,19 @@ export default function Philosophy({ isLanding = false }: { isLanding?: boolean 
           <div className="w-[0.5px] h-10 md:h-20 bg-[#B59E85]/20 mb-8" />
           
           <div className="flex flex-col items-center gap-1">
-            <p className="text-[9px] md:text-[11px] uppercase tracking-[0.4em] text-[#1A1A1A] font-medium">
+            <p className="text-[9px] md:text-[11px] uppercase tracking-[0.5em] text-[#1A1A1A] font-extrabold">
               {isLanding ? "UtiLiX Studio" : "Dr. Marc Rovira"}
             </p>
-            <p className="text-[7px] md:text-[9px] uppercase tracking-[0.3em] text-[#1A1A1A]/40 italic">
-              {isLanding ? "Especialistas en Sector Médico" : "Fundador & Director Médico"}
+            <p className="text-[7px] md:text-[9px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 italic font-medium">
+              {isLanding ? "Curadores de Autoridad Médica" : "Fundador & Director Médico"}
             </p>
           </div>
         </motion.div>
       </div>
 
       <div className="absolute right-6 md:right-10 bottom-10 hidden lg:block">
-        <span className="text-[7px] uppercase tracking-[1em] text-[#1A1A1A]/20 origin-right -rotate-90 block">
-          Barcelona — {isLanding ? "Creative Studio" : "41.3926° N"}
+        <span className="text-[7px] uppercase tracking-[1em] text-[#1A1A1A]/20 origin-right -rotate-90 block font-bold">
+          Barcelona — {isLanding ? "Identity Studio" : "41.3926° N"}
         </span>
       </div>
     </section>

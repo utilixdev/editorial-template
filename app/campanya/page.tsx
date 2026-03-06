@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
@@ -6,64 +7,89 @@ import Methodology from "@/components/Methodology";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import LeadPopup from "@/components/LeadPopup"; 
 import { motion } from "framer-motion";
 
 export default function CampanyaPage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Función de control mejorada para asegurar la ejecución
+  const handleOpenPopup = () => {
+    console.log("Protocolo de apertura iniciado");
+    setShowPopup(true);
+  };
+
   return (
     <main className="bg-[#FAF9F6] relative w-full overflow-hidden">
-      {/* 1. Navegación: Identidad visual de UtiLiX */}
-      <Navigation />
+      <Navigation isLanding={true} />
       
-      {/* 2. Hero: Imagen/Vídeo con estética de clínica Tier 1 */}
-      <Hero isLanding={true} />
+      {/* 1. CONEXIÓN DEL HERO: Pasamos la función handleOpenPopup */}
+      <Hero 
+        isLanding={true} 
+        onOpenPopup={handleOpenPopup} 
+      />
       
-      {/* 3. Filosofía: Cita sobre diseño y confianza con la "U" de fondo */}
       <Philosophy isLanding={true} />
       
-      {/* 4. Metodología: Proceso de trabajo del estudio */}
       <Methodology isLanding={true} />
       
-      {/* 5. Servicios: Catálogo de soluciones digitales */}
-      <Services isLanding={true} />
+      {/* 2. CONEXIÓN DE SERVICES: También deben poder abrir el popup */}
+      <Services 
+        isLanding={true} 
+        onOpenPopup={handleOpenPopup} 
+      />
 
-      {/* 6. SECCIÓN DE CIERRE (CTA): El punto de conversión directa */}
-      <section id="contacte" className="py-40 flex flex-col items-center bg-[#1A1A1A] text-[#FAF9F6]">
+      <section id="contacto" className="py-48 flex flex-col items-center bg-[#1A1A1A] text-[#FAF9F6] relative">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center px-6"
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center px-6 z-10"
         >
-          <span className="text-[10px] uppercase tracking-[0.8em] mb-8 block opacity-40">
-            Digital Studio — Barcelona
+          <span className="text-[10px] uppercase tracking-[0.8em] mb-12 block text-[#B59E85] font-black">
+            UtiLiX Studio — High Fidelity Assets
           </span>
           
-          <h2 className="font-serif text-5xl md:text-7xl mb-12 tracking-tighter leading-[0.9]">
-            El estándar digital <br /> 
-            <span className="italic opacity-50">para clínicas de élite.</span>
+          <h2 className="font-serif text-6xl md:text-9xl mb-16 tracking-tighter leading-[0.8] italic">
+            El estándar <br /> 
+            <span className="opacity-40 not-italic">para la élite.</span>
           </h2>
           
-          <p className="max-w-xl mx-auto mb-16 text-[11px] uppercase tracking-[0.3em] leading-loose opacity-60">
-            Diseñamos experiencias de lujo que transforman la percepción de su marca médica. 
-            Menos ruido, más distinción y una conversión superior.
+          <p className="max-w-2xl mx-auto mb-20 text-[11px] md:text-[13px] uppercase tracking-[0.35em] leading-[2.5] opacity-60 font-medium">
+            No diseñamos sitios web; construimos activos de autoridad que <br className="hidden md:block"/> 
+            filtran su audiencia y consolidan su prestigio digital. <br className="hidden md:block"/>
+            Rigor técnico para resultados de excepción.
           </p>
           
-          <a 
-            href="https://wa.me/34711556444" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-16 py-6 border border-[#FAF9F6]/20 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-[#FAF9F6] hover:text-[#1A1A1A] transition-all duration-700 ease-in-out"
-          >
-            Solicitar Propuesta Personalizada
-          </a>
+          <div className="flex flex-col items-center gap-10">
+            {/* Este botón ahora usa la función centralizada */}
+            <button 
+              onClick={handleOpenPopup}
+              className="group relative px-20 py-8 bg-[#B59E85] text-white text-[10px] uppercase tracking-[0.6em] font-black transition-all duration-700 hover:bg-white hover:text-[#1A1A1A] shadow-2xl shadow-[#B59E85]/10"
+            >
+              Iniciar Auditoría de Marca
+            </button>
+            
+            <div className="flex flex-col items-center gap-2">
+               <p className="text-[9px] uppercase tracking-[0.5em] opacity-40 font-bold">
+                 Disponibilidad sujeta a valoración de proyecto
+               </p>
+               <div className="w-12 h-[1px] bg-[#B59E85]/40"></div>
+            </div>
+          </div>
         </motion.div>
+
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
+          <span className="font-serif italic text-[30vw]">Elite</span>
+        </div>
       </section>
       
-      {/* 7. Footer: Datos de contacto */}
       <Footer />
-
-      {/* 8. Botón de WhatsApp: Contacto directo */}
       <WhatsAppFloat />
+
+      {/* 3. EL POPUP: Asegúrate de que LeadPopup use forceOpen y setForceOpen */}
+      <LeadPopup forceOpen={showPopup} setForceOpen={setShowPopup} />
     </main>
   );
 }

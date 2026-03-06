@@ -2,24 +2,26 @@
 import { motion } from "framer-motion";
 
 export default function Methodology({ isLanding = false }: { isLanding?: boolean }) {
-  // Pasos para la Clínica vs Pasos para el Estudio (UtiLiX)
-  const steps = isLanding ? [
+  // REESCRITURA TIER 1: Textos de autoridad para el estudio vs precisión para la clínica
+  const studioSteps = [
     {
       no: "01",
-      title: "Análisis de Armonía",
-      desc: "Estudiamos la arquitectura facial de forma integral para restaurar el equilibrio sin alterar de la identidad propia."
+      title: "Auditoría de Autoridad",
+      desc: "Analizamos el posicionamiento actual de su marca para identificar las brechas de prestigio entre su excelencia médica y su presencia digital."
     },
     {
       no: "02",
-      title: "Ejecución Magistral",
-      desc: "Intervenciones de alta costura médica donde la técnica desaparece para dar paso a una belleza que parece innata."
+      title: "Despliegue de Activos",
+      desc: "Ejecutamos la arquitectura visual bajo estándares de alta fidelidad, asegurando que cada interacción proyecte un estatus inalcanzable."
     },
     {
       no: "03",
-      title: "Preservación del Resultado",
-      desc: "Custodiamos la evolución de cada paciente para garantizar que la excelencia del primer día perdure a través del tiempo."
+      title: "Optimización de Conversión",
+      desc: "Custodiamos el rendimiento del ecosistema digital, filtrando el tráfico para conectar exclusivamente con pacientes de alto valor."
     }
-  ] : [
+  ];
+
+  const clinicSteps = [
     {
       no: "01",
       title: "Diagnóstico de Precisión",
@@ -37,6 +39,8 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
     }
   ];
 
+  const steps = isLanding ? studioSteps : clinicSteps;
+
   return (
     <section className="py-32 md:py-56 bg-[#1A1A1A] text-[#FAF9F6] overflow-hidden">
       <div className="px-6 md:px-24 max-w-7xl mx-auto">
@@ -52,7 +56,7 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
           </motion.span>
           <h2 className="font-serif text-5xl md:text-8xl tracking-tighter leading-[0.85]">
             {isLanding ? (
-              <>La ciencia de la <br /> <span className="italic opacity-40">precisión absoluta.</span></>
+              <>El rigor técnico <br /> <span className="italic opacity-40">detrás del arte.</span></>
             ) : (
               <>La ciencia de la <br /> <span className="italic opacity-40">precisión absoluta.</span></>
             )}
@@ -78,7 +82,7 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
                 {step.desc}
               </p>
               
-              {/* Línea decorativa de lujo */}
+              {/* Línea decorativa de lujo: mantenemos tu animación original */}
               <div className="mt-12 h-[1px] w-full bg-[#FAF9F6]/10 relative overflow-hidden">
                 <motion.div 
                   initial={{ x: "-100%" }}
