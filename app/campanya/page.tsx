@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
 import Methodology from "@/components/Methodology";
+import VisionConcepts from "@/components/VisionConcepts"; // 1. Importamos el nuevo componente
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -32,8 +33,12 @@ export default function CampanyaPage() {
       <Philosophy isLanding={true} />
       
       <Methodology isLanding={true} />
+
+      {/* 2. INSERTAMOS CONCEPTOS DE VISIÓN AQUÍ */}
+      {/* Esto actúa como tu "Portfolio de Autoridad" antes de vender servicios */}
+      <VisionConcepts />
       
-      {/* 2. CONEXIÓN DE SERVICES: También deben poder abrir el popup */}
+      {/* 3. CONEXIÓN DE SERVICES: También deben poder abrir el popup */}
       <Services 
         isLanding={true} 
         onOpenPopup={handleOpenPopup} 
@@ -88,7 +93,7 @@ export default function CampanyaPage() {
       <Footer />
       <WhatsAppFloat />
 
-      {/* 3. EL POPUP: Asegúrate de que LeadPopup use forceOpen y setForceOpen */}
+      {/* 4. EL POPUP: Asegúrate de que LeadPopup use forceOpen y setForceOpen */}
       <LeadPopup forceOpen={showPopup} setForceOpen={setShowPopup} />
     </main>
   );

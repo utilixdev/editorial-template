@@ -5,21 +5,26 @@ const studioServices = [
   { 
     title: "Ingeniería de Autoridad", 
     desc: "Desplegamos ecosistemas digitales en Next.js bajo estándares de alta fidelidad. No erigimos sitios web; consolidamos activos de prestigio que anulan la percepción de competencia.",
-    tag: "Protocolo I"
+    tag: "Protocolo I",
+    className: "md:w-[45%] md:self-start", // Primera tarjeta: Ancha a la izquierda
+    direction: -40
   },
   { 
     title: "Dirección de Estatus", 
     desc: "Arquitectura de marca diseñada para clínicas que exigen el escalón superior. Transformamos su identidad en un referente de lujo que legitima el incremento de sus honorarios.",
-    tag: "Protocolo II"
+    tag: "Protocolo II",
+    className: "md:w-[40%] md:self-end md:mt-[-150px]", // Segunda: Derecha y sube para solaparse visualmente
+    direction: 40
   },
   { 
     title: "Sistemas de Filtrado", 
     desc: "Algoritmos de captación de alto valor. Diseñados para atraer exclusivamente al paciente que no cuestiona el coste, sino que busca la maestría clínica absoluta.",
-    tag: "Protocolo III"
+    tag: "Protocolo III",
+    className: "md:w-[35%] md:self-center md:mt-12", // Tercera: Centrada y con aire
+    direction: -40
   },
 ];
 
-// Añadimos onOpenPopup a las props
 export default function Services({ 
   isLanding = false, 
   onOpenPopup 
@@ -27,88 +32,98 @@ export default function Services({
   isLanding?: boolean;
   onOpenPopup?: () => void; 
 }) {
-  const currentServices = isLanding ? studioServices : studioServices; // Aquí irían tus servicios de clínica si no es landing
+  const currentServices = isLanding ? studioServices : studioServices;
 
   return (
-    <section id="servicios" className="py-24 md:py-48 px-6 md:px-24 bg-[#FAF9F6]">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 md:mb-40 gap-8">
-        <div className="max-w-2xl">
+    <section id="servicios" className="pt-16 pb-48 px-6 md:px-24 bg-[#FAF9F6] overflow-hidden">
+      {/* Encabezado Asimétrico */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 md:mb-56 gap-12">
+        <div className="max-w-3xl">
           <motion.span 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="text-[#B59E85] text-[9px] uppercase tracking-[0.6em] mb-8 block font-bold"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-[#B59E85] text-[10px] uppercase tracking-[0.8em] mb-10 block font-black"
           >
             {isLanding ? "Protocolos de Intervención de Élite" : "Servicios de Autor"}
           </motion.span>
-          <h2 className="font-serif text-5xl md:text-8xl text-[#1A1A1A] tracking-tighter leading-[0.85]">
+          <h2 className="font-serif text-6xl md:text-9xl text-[#1A1A1A] tracking-[ -0.05em] leading-[0.8]">
             {isLanding ? (
-              <>Ingeniería <br /> <span className="italic opacity-40">de Prestigio.</span></>
+              <>Ingeniería <br /> <span className="italic opacity-30 font-light text-[12vw] md:text-[8vw]">de Prestigio.</span></>
             ) : (
-              <>Experiencias <br /> <span className="italic opacity-40 text-[10vw] md:text-[6vw]">Transformadoras.</span></>
+              <>Experiencias <br /> <span className="italic opacity-30 text-[10vw] md:text-[6vw]">Transformadoras.</span></>
             )}
           </h2>
         </div>
-        <p className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 max-w-[300px] leading-loose font-bold">
+        <motion.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.5 }}
+          transition={{ delay: 0.5 }}
+          className="text-[11px] uppercase tracking-[0.4em] text-[#1A1A1A] max-w-[280px] leading-[2.2] font-bold border-l border-[#B59E85]/30 pl-8"
+        >
           {isLanding 
             ? "Erradicamos lo genérico. Proyectamos la superioridad técnica de su clínica."
             : "Cada intervención es una obra de rigor donde la ciencia es el único estándar."
           }
-        </p>
+        </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-24 md:gap-x-16 lg:gap-x-24">
+      {/* Contenedor Flex con Dirección de Columna para manejar la asimetría */}
+      <div className="flex flex-col relative min-h-[1000px]">
         {currentServices.map((s, i) => (
           <motion.div 
             key={i} 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            initial={{ opacity: 0, x: s.direction, y: 30 }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ 
-              delay: i * 0.2, 
-              duration: 1.2, 
+              duration: 1.5, 
               ease: [0.22, 1, 0.36, 1] 
             }}
-            className="group relative flex flex-col"
+            className={`group relative flex flex-col mb-32 md:mb-0 ${s.className}`}
           >
-            <div className="flex items-center justify-between mb-12 border-b border-[#1A1A1A]/5 pb-6">
-              <span className="text-[9px] font-bold tracking-[0.5em] text-[#B59E85] uppercase">
-                {s.tag}
-              </span>
-              <span className="font-serif italic text-2xl opacity-10 group-hover:opacity-100 group-hover:text-[#B59E85] transition-all duration-1000">
-                /0{i + 1}
-              </span>
+            {/* Cabecera de Servicio con Línea de Tensión */}
+            <div className="flex items-center justify-between mb-12 relative">
+               <div className="absolute top-0 left-0 w-full h-[1px] bg-[#1A1A1A]/5 group-hover:bg-[#B59E85]/20 transition-colors duration-1000" />
+               <div className="pt-8 flex justify-between w-full items-start">
+                  <span className="text-[10px] font-black tracking-[0.6em] text-[#B59E85] uppercase">
+                    {s.tag}
+                  </span>
+                  <span className="font-serif italic text-6xl opacity-5 group-hover:opacity-20 group-hover:text-[#B59E85] transition-all duration-1000 transform group-hover:-translate-y-2">
+                    {i + 1}
+                  </span>
+               </div>
             </div>
             
-            <h3 className="font-serif text-3xl md:text-4xl text-[#1A1A1A] mb-8 tracking-tighter group-hover:pl-2 transition-all duration-700">
+            <h3 className="font-serif text-4xl md:text-5xl text-[#1A1A1A] mb-10 tracking-tighter opacity-90 group-hover:pl-4 transition-all duration-700 ease-out">
               {s.title}
             </h3>
             
-            <p className="text-[13px] md:text-[14px] leading-[2] text-[#1A1A1A]/60 mb-12 min-h-[100px] tracking-wide font-medium">
+            <p className="text-[14px] md:text-[15px] leading-[2.1] text-[#1A1A1A]/60 mb-14 tracking-wide font-serif italic max-w-md">
               {s.desc}
             </p>
 
-            {/* BOTÓN REEVALUADO: Ahora dispara el Popup si es landing */}
+            {/* CTA de Élite */}
             <button 
               onClick={isLanding ? onOpenPopup : undefined} 
-              className="mt-auto relative inline-block group/btn self-start text-left"
+              className="mt-auto relative inline-block group/btn self-start overflow-hidden py-2"
             >
-              <span className="text-[9px] uppercase tracking-[0.6em] text-[#1A1A1A] font-black transition-colors duration-500 group-hover/btn:text-[#B59E85]">
+              <span className="text-[10px] uppercase tracking-[0.8em] text-[#1A1A1A] font-black block transition-transform duration-500 group-hover/btn:-translate-y-[120%]">
+                {isLanding ? "Solicitar Auditoría" : "Explorar Servicio"}
+              </span>
+              <span className="absolute inset-0 text-[10px] uppercase tracking-[0.8em] text-[#B59E85] font-black block transition-transform duration-500 translate-y-[120%] group-hover/btn:translate-y-0">
                 {isLanding ? "Solicitar Auditoría" : "Explorar Servicio"}
               </span>
               
-              <motion.div 
-                className="h-[1px] bg-[#B59E85] mt-2"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 1.5 + (i * 0.2), duration: 1 }}
-                style={{ originX: 0 }}
-              />
+              <div className="h-[1px] bg-[#B59E85] mt-4 w-full transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-700 origin-left" />
             </button>
-
-            <div className="absolute -inset-8 bg-white/50 opacity-0 group-hover:opacity-100 -z-10 transition-all duration-1000 rounded-xl blur-2xl hidden md:block" />
           </motion.div>
         ))}
+
+        {/* Marca de agua de fondo para unir las piezas asimétricas */}
+        <div className="absolute top-[20%] right-[-5%] font-serif italic text-[20vw] text-[#1A1A1A]/[0.02] pointer-events-none select-none rotate-12">
+          Systems
+        </div>
       </div>
     </section>
   );
