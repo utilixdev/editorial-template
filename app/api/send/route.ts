@@ -9,14 +9,14 @@ export async function POST(req: Request) {
     const { clinica, email, tel, web, tipo, presupuesto } = body;
 
     const data = await resend.emails.send({
-      // CAMBIO CLAVE: Ahora usas tu dominio verificado
+      // Remitente con dominio verificado
       from: 'Utilix Studio <admisiones@utilixstudio.com>', 
       
-      // Donde recibes tú la notificación
+      // Destinatario (tu correo)
       to: ['info@utilix.es'], 
       
-      // Esto permite que si das a "Responder" en tu email, le escribas directo al cliente
-      reply_to: email, 
+      // CORRECCIÓN: 'replyTo' en lugar de 'reply_to'
+      replyTo: email, 
       
       subject: `SOLICITUD ADMISIÓN: ${clinica.toUpperCase()}`,
       html: `
