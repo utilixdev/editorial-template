@@ -1,33 +1,29 @@
 "use client";
-import { useState } from "react";
-import Navigation from "@/components/Navigation";
+import { motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
 import Methodology from "@/components/Methodology";
 import VisionConcepts from "@/components/VisionConcepts"; 
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
-import LeadPopup from "@/components/LeadPopup"; 
-import { motion } from "framer-motion";
 
 export default function CampanyaPage() {
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleOpenPopup = () => {
-    console.log("Protocolo de apertura iniciado");
-    setShowPopup(true);
+  
+  // Protocolo de navegación: Directo a la conversión
+  const scrollToContacto = () => {
+    const element = document.getElementById('contacto');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <main className="bg-[#FAF9F6] relative w-full overflow-hidden">
-      <Navigation isLanding={true} />
       
-      {/* 1. HERO: PROPUESTA A - Liderazgo de Mercado */}
-      {/* El componente Hero ya maneja los textos isLanding: "Autoridad Visual para Clínicas de Élite" */}
+      {/* 1. HERO: Punto de entrada sin distracciones */}
       <Hero 
         isLanding={true} 
-        onOpenPopup={handleOpenPopup} 
+        onOpenPopup={scrollToContacto} 
       />
       
       <Philosophy isLanding={true} />
@@ -36,13 +32,15 @@ export default function CampanyaPage() {
 
       <VisionConcepts />
       
+      {/* 2. SERVICES: Filtrado por servicio hacia el cierre */}
       <Services 
         isLanding={true} 
-        onOpenPopup={handleOpenPopup} 
+        onOpenPopup={scrollToContacto} 
       />
 
-      {/* SECCIÓN DE CIERRE: BANNER FUNCIONAL DE CONVERSIÓN */}
-      <section id="contacto" className="py-48 flex flex-col items-center bg-[#1A1A1A] text-[#FAF9F6] relative">
+      {/* SECCIÓN DE CIERRE: EL ÚLTIMO FILTRO ANTES DEL FORMULARIO */}
+      <section className="py-24 flex flex-col items-center bg-[#1A1A1A] text-[#FAF9F6] relative">
+
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,9 +64,8 @@ export default function CampanyaPage() {
           </p>
           
           <div className="flex flex-col items-center gap-10">
-            {/* CTA MEJORADO PARA ADS */}
             <button 
-              onClick={handleOpenPopup}
+              onClick={scrollToContacto}
               className="group relative px-20 py-8 bg-[#B59E85] text-white text-[10px] uppercase tracking-[0.6em] font-black transition-all duration-700 hover:bg-white hover:text-[#1A1A1A] shadow-2xl shadow-[#B59E85]/10"
             >
               Solicitar Evaluación Privada
@@ -88,10 +85,9 @@ export default function CampanyaPage() {
         </div>
       </section>
       
+      {/* EL CIERRE FINAL: Formulario de admisión */}
       <Footer />
-      <WhatsAppFloat />
 
-      <LeadPopup forceOpen={showPopup} setForceOpen={setShowPopup} />
     </main>
   );
 }

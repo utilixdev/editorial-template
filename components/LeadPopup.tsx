@@ -43,10 +43,13 @@ export default function LeadPopup({ forceOpen, setForceOpen }: LeadPopupProps) {
 
   useEffect(() => { if (forceOpen) setIsOpen(true); }, [forceOpen]);
   
+  // COMENTADO PARA EVITAR QUE SALTE AUTOMÁTICAMENTE A LOS 6 SEGUNDOS
+  /*
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 6000);
     return () => clearTimeout(timer);
   }, []);
+  */
 
   const handleClose = () => {
     setIsOpen(false);

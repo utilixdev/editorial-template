@@ -2,22 +2,22 @@
 import { motion } from "framer-motion";
 
 export default function Methodology({ isLanding = false }: { isLanding?: boolean }) {
-  // REESCRITURA TIER 1: Textos de autoridad para el estudio vs precisión para la clínica
+  // REESCRITURA TIER 1: Ingeniería de Estatus para el estudio vs precisión para la clínica
   const studioSteps = [
     {
       no: "01",
-      title: "Auditoría de Autoridad",
-      desc: "Analizamos el posicionamiento actual de su marca para identificar las brechas de prestigio entre su excelencia médica y su presencia digital."
+      title: "Diagnóstico de Fricción",
+      desc: "Auditamos los puntos de fuga de autoridad en su ecosistema actual para erradicar cualquier elemento que erosione la percepción de su maestría clínica."
     },
     {
       no: "02",
-      title: "Despliegue de Activos",
-      desc: "Ejecutamos la arquitectura visual bajo estándares de alta fidelidad, asegurando que cada interacción proyecte un estatus inalcanzable."
+      title: "Blindaje de Activos",
+      desc: "Estructuramos su presencia bajo protocolos de ingeniería de alta fidelidad, asegurando que cada pixel comunique un estatus de inaccesibilidad para la competencia."
     },
     {
       no: "03",
-      title: "Optimización de Conversión",
-      desc: "Custodiamos el rendimiento del ecosistema digital, filtrando el tráfico para conectar exclusivamente con pacientes de alto valor."
+      title: "Sistemas de Selección",
+      desc: "Configuramos algoritmos de filtrado para purificar el tráfico, conectando su clínica exclusivamente con el segmento de ultra-alto valor que no cuestiona el coste."
     }
   ];
 
@@ -42,7 +42,7 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
   const steps = isLanding ? studioSteps : clinicSteps;
 
   return (
-    <section className="py-32 md:py-56 bg-[#1A1A1A] text-[#FAF9F6] overflow-hidden">
+      <section className="bg-[#1A1A1A] text-[#FAF9F6] pt-32 md:pt-48 pb-12 md:pb-20 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
       <div className="px-6 md:px-24 max-w-7xl mx-auto">
         
         {/* Cabecera del método */}
@@ -83,14 +83,16 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
               </p>
               
               {/* Línea decorativa de lujo: mantenemos tu animación original */}
-              <div className="mt-12 h-[1px] w-full bg-[#FAF9F6]/10 relative overflow-hidden">
-                <motion.div 
-                  initial={{ x: "-100%" }}
-                  whileInView={{ x: "100%" }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 bg-[#B59E85]/30 w-1/3"
-                />
-              </div>
+              {/* Línea decorativa de lujo: Ahora con crecimiento total */}
+            <div className="mt-12 h-[1px] w-full bg-[#FAF9F6]/10 relative overflow-hidden">
+              <motion.div 
+                initial={{ width: "0%" }} // Empieza en nada
+                whileInView={{ width: "100%" }} // Se dibuja hasta el final
+                transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }} // Movimiento fluido y premium
+                viewport={{ once: true }} // Se queda dibujada una vez que aparece
+                className="absolute inset-0 bg-[#B59E85]/40"
+              />
+            </div>
             </motion.div>
           ))}
         </div>

@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Philosophy({ isLanding = false }: { isLanding?: boolean }) {
   return (
-    <section className="relative min-h-[80vh] py-24 md:py-64 px-6 md:px-24 bg-[#FAF9F6] flex flex-col items-center justify-center overflow-hidden">
-      
+<section className="bg-[#FAF9F6] pt-32 md:pt-48 pb-12 md:pb-20 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">      
       {/* Inicial de fondo: "U" para UtiLiX, "A" para Atelier/Anónimo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
         <span className="font-serif text-[80vw] md:text-[50vw] text-[#1A1A1A]/[0.03] select-none leading-none">
@@ -37,17 +36,18 @@ export default function Philosophy({ isLanding = false }: { isLanding?: boolean 
           className="font-serif text-[9vw] sm:text-[7vw] md:text-[4.2vw] leading-[1.2] md:leading-[1.1] text-[#1A1A1A] tracking-tight italic"
         >
           {isLanding ? (
-            <>
-              "La confianza no se pide, <br className="hidden sm:block" />
-              se <span className="text-[#B59E85] opacity-90">construye</span> a través de un estándar <br className="sm:hidden" /> visual que no admite <span className="not-italic opacity-30">concesiones."</span>
-            </>
-          ) : (
-            <>
-              "La belleza no es un objetivo, <br className="hidden sm:block" />
-              es el <span className="text-[#B59E85] opacity-90">resultado</span> de una salud <br className="sm:hidden" /> en armonía <br className="hidden sm:block" />
-              y una precisión <span className="not-italic opacity-30">invisible."</span>
-            </>
-          )}
+    <>
+      "Su prestigio no es <span className="text-[#B59E85] opacity-90">negociable </span>. <br className="hidden sm:block" />
+      La autoridad se proyecta antes  de la consulta <br className="sm:hidden" /><br className="hidden sm:block" />
+      o se pierde para <span className="not-italic opacity-30">siempre."</span>
+    </>
+  ) : (
+    <>
+      "La belleza no es un objetivo, <br className="hidden sm:block" />
+      es el <span className="text-[#B59E85] opacity-90">resultado</span> de una salud <br className="sm:hidden" /> en armonía <br className="hidden sm:block" />
+      y una precisión <span className="not-italic opacity-30">invisible."</span>
+    </>
+  )}
         </motion.h2>
 
         {/* Firma */}
@@ -65,7 +65,7 @@ export default function Philosophy({ isLanding = false }: { isLanding?: boolean 
               {isLanding ? "UtiLiX Studio" : "Dr. Marc Rovira"}
             </p>
             <p className="text-[7px] md:text-[9px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 italic font-medium">
-              {isLanding ? "Curadores de Autoridad Médica" : "Fundador & Director Médico"}
+              {isLanding ? "Ingeniería de Estatus para la Élite Médica" : "Fundador & Director Médico"}
             </p>
           </div>
         </motion.div>

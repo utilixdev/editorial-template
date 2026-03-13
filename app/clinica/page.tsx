@@ -9,7 +9,7 @@ export default function ClinicaPage() {
       <Navigation />
       
       {/* HERO DE PÀGINA INTERNA */}
-      <section className="pt-44 pb-20 px-6 md:px-24">
+<section className="bg-[#FAF9F6] pt-32 md:pt-48 pb-12 md:pb-20 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">      
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

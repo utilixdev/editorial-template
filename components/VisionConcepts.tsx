@@ -30,7 +30,7 @@ const concepts = [
 
 export default function VisionConcepts() {
   return (
-    <section className="bg-[#FAF9F6] py-40 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
+<section className="bg-[#FAF9F6] pt-24 pb-0 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Encabezado con desplazamiento lateral */}

@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 const studioServices = [
   { 
     title: "Ingeniería de Autoridad", 
-    desc: "Desplegamos ecosistemas digitales en Next.js bajo estándares de alta fidelidad. No erigimos sitios web; consolidamos activos de prestigio que anulan la percepción de competencia.",
+    desc: "Desplegamos ecosistemas digitales bajo estándares de alta fidelidad. No erigimos sitios web; consolidamos activos de prestigio que eliminan de golpe cualquier comparación con su competencia.",
     tag: "Protocolo I",
-    className: "md:w-[45%] md:self-start", // Primera tarjeta: Ancha a la izquierda
+    className: "md:w-[45%] md:self-start",
     direction: -40
   },
   { 
     title: "Dirección de Estatus", 
-    desc: "Arquitectura de marca diseñada para clínicas que exigen el escalón superior. Transformamos su identidad en un referente de lujo que legitima el incremento de sus honorarios.",
+    desc: "Arquitectura de marca para clínicas que exigen el escalón superior. Rediseñamos su identidad para que su excelencia médica se refleje en su factura y en el perfil de sus pacientes.",
     tag: "Protocolo II",
-    className: "md:w-[40%] md:self-end md:mt-[-150px]", // Segunda: Derecha y sube para solaparse visualmente
+    className: "md:w-[40%] md:self-end md:mt-[-150px]", 
     direction: 40
   },
   { 
     title: "Sistemas de Filtrado", 
-    desc: "Algoritmos de captación de alto valor. Diseñados para atraer exclusivamente al paciente que no cuestiona el coste, sino que busca la maestría clínica absoluta.",
+    desc: "Algoritmos de captación selectiva. Diseñados para atraer exclusivamente a pacientes que buscan resultados excepcionales y no cuestionan el valor de su presupuesto.",
     tag: "Protocolo III",
-    className: "md:w-[35%] md:self-center md:mt-12", // Tercera: Centrada y con aire
+    className: "md:w-[35%] md:self-center md:mt-12",
     direction: -40
   },
 ];
@@ -35,7 +35,8 @@ export default function Services({
   const currentServices = isLanding ? studioServices : studioServices;
 
   return (
-    <section id="servicios" className="pt-16 pb-48 px-6 md:px-24 bg-[#FAF9F6] overflow-hidden">
+    // CAMBIO: pt-16 por pt-0 para eliminar el aire excesivo arriba
+<section className="bg-[#FAF9F6] pt-12 md:pt-24 pb-12 md:pb-20 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">      
       {/* Encabezado Asimétrico */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 md:mb-56 gap-12">
         <div className="max-w-3xl">
@@ -43,11 +44,12 @@ export default function Services({
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-[#B59E85] text-[10px] uppercase tracking-[0.8em] mb-10 block font-black"
+            // CAMBIO: mb-6 para compactar el aire superior
+            className="text-[#B59E85] text-[10px] uppercase tracking-[0.8em] mb-6 block font-black"
           >
             {isLanding ? "Protocolos de Intervención de Élite" : "Servicios de Autor"}
           </motion.span>
-          <h2 className="font-serif text-6xl md:text-9xl text-[#1A1A1A] tracking-[ -0.05em] leading-[0.8]">
+          <h2 className="font-serif text-6xl md:text-9xl text-[#1A1A1A] tracking-[-0.05em] leading-[0.8]">
             {isLanding ? (
               <>Ingeniería <br /> <span className="italic opacity-30 font-light text-[12vw] md:text-[8vw]">de Prestigio.</span></>
             ) : (
@@ -68,7 +70,6 @@ export default function Services({
         </motion.p>
       </div>
 
-      {/* Contenedor Flex con Dirección de Columna para manejar la asimetría */}
       <div className="flex flex-col relative min-h-[1000px]">
         {currentServices.map((s, i) => (
           <motion.div 
@@ -82,7 +83,6 @@ export default function Services({
             }}
             className={`group relative flex flex-col mb-32 md:mb-0 ${s.className}`}
           >
-            {/* Cabecera de Servicio con Línea de Tensión */}
             <div className="flex items-center justify-between mb-12 relative">
                <div className="absolute top-0 left-0 w-full h-[1px] bg-[#1A1A1A]/5 group-hover:bg-[#B59E85]/20 transition-colors duration-1000" />
                <div className="pt-8 flex justify-between w-full items-start">
@@ -103,7 +103,6 @@ export default function Services({
               {s.desc}
             </p>
 
-            {/* CTA de Élite */}
             <button 
               onClick={isLanding ? onOpenPopup : undefined} 
               className="mt-auto relative inline-block group/btn self-start overflow-hidden py-2"
@@ -120,7 +119,6 @@ export default function Services({
           </motion.div>
         ))}
 
-        {/* Marca de agua de fondo para unir las piezas asimétricas */}
         <div className="absolute top-[20%] right-[-5%] font-serif italic text-[20vw] text-[#1A1A1A]/[0.02] pointer-events-none select-none rotate-12">
           Systems
         </div>
