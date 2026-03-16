@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle2 } from "lucide-react";
-import Link from "next/link"; // Importación necesaria añadida
+import Link from "next/link";
 
 export default function Footer() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
@@ -11,22 +11,20 @@ export default function Footer() {
     email: "",
     web: "",
     tel: "",
-    tipo: "Dominio (Ecosistema Completo)",
-    presupuesto: "5.000€ — 10.000€"
+    tipo: "Consolidación de Autoridad",
+    presupuesto: "Auditoría Previa" // Mantenemos el campo interno para compatibilidad con el API
   });
 
   const handleSubmitEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.tel) return;
     setStatus('sending');
-
     try {
       const res = await fetch('/api/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
       if (res.ok) {
         setStatus('success');
         setTimeout(() => setStatus('idle'), 5000);
@@ -46,13 +44,11 @@ export default function Footer() {
       `⚜️ *SOLICITUD DE AUDITORÍA PRIORITARIA*`,
       `_______________________________`,
       `*ENTIDAD:* ${formData.clinica.toUpperCase()}`,
-      `*VALORACIÓN:* ${formData.presupuesto}`,
+      `*OBJETIVO:* ${formData.tipo.toUpperCase()}`,
       `*CONTACTO:* ${formData.tel}`,
-      `*PROTOCOLO:* ${formData.tipo.includes('Dominio') ? 'Dominio de Mercado' : 'Consolidación de Autoridad'}`,
       `_______________________________`,
-      `_Deseo agendar una sesión estratégica para el despliegue de autoridad visual de la clínica._`
+      `_Deseo agendar la sesión estratégica gratuita para analizar el potencial de marca de la clínica._`
     ].join('%0A');
-
     window.open(`https://wa.me/${miTelefono}?text=${mensaje}`, "_blank");
   };
 
@@ -74,6 +70,22 @@ export default function Footer() {
           <p className="text-[#1A1A1A]/60 max-w-sm mb-12 text-[14px] leading-[1.8] font-serif italic border-l border-[#B59E85]/30 pl-6">
             "Definiendo el estándar visual para las clínicas que lideran el futuro del bienestar."
           </p>
+          
+          {/* Micro-copy de Autoridad y Confianza */}
+          <div className="mt-12 space-y-4">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 flex items-center gap-3">
+              <span className="w-1 h-1 bg-[#B59E85] rounded-full"></span>
+              Fase 01: Auditoría de activos sin coste.
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 flex items-center gap-3">
+              <span className="w-1 h-1 bg-[#B59E85] rounded-full"></span>
+              Fase 02: Propuesta de intervención estratégica.
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 flex items-center gap-3 font-bold">
+              <span className="w-1 h-1 bg-[#B59E85] rounded-full"></span>
+              Sin potencial real, recibirá recomendaciones directas.
+            </p>
+          </div>
         </motion.div>
 
         <div className="relative min-h-[580px] md:min-h-[600px]">
@@ -102,16 +114,16 @@ export default function Footer() {
                 className="flex flex-col gap-6 w-full"
               >
                 <div className="mb-6">
-                  <label className="text-[9px] uppercase tracking-[0.5em] text-[#B59E85] font-black mb-6 block">Inversión de Activos</label>
+                  <label className="text-[9px] uppercase tracking-[0.5em] text-[#B59E85] font-black mb-6 block">Objetivo del Protocolo</label>
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { l: "CONSOLIDACIÓN", r: "2.5K — 5K" },
-                      { l: "DOMINIO TOTAL", r: "5K — 10K+" }
+                      { l: "CONSOLIDACIÓN", r: "Auditoría Estratégica" },
+                      { l: "DOMINIO DE MERCADO", r: "Auditoría Prioritaria" }
                     ].map((item) => (
                       <label key={item.l} className="group cursor-pointer">
                         <input 
                           type="radio" name="budget" value={item.r} 
-                          checked={formData.presupuesto === item.r}
+                          checked={formData.tipo === item.l}
                           onChange={() => setFormData({...formData, presupuesto: item.r, tipo: item.l})}
                           className="peer hidden" 
                         />
@@ -123,7 +135,6 @@ export default function Footer() {
                     ))}
                   </div>
                 </div>
-
                 <input required type="text" placeholder="NOMBRE DE LA CLÍNICA *" value={formData.clinica}
                   onChange={(e) => setFormData({...formData, clinica: e.target.value})} className={inputClassName} />
                 
@@ -133,15 +144,14 @@ export default function Footer() {
                   <input required type="tel" placeholder="TELÉFONO DIRECTO *" value={formData.tel}
                     onChange={(e) => setFormData({...formData, tel: e.target.value})} className={inputClassName} />
                 </div>
-
                 <input type="text" placeholder="URL (WEB / INSTAGRAM)" value={formData.web}
                   onChange={(e) => setFormData({...formData, web: e.target.value})} className={inputClassName} />
-
+                
                 <div className="flex flex-col sm:flex-row gap-4 mt-10">
                   <button type="submit" disabled={status === 'sending'}
                     className="flex-[2] bg-[#1A1A1A] text-white px-8 py-6 text-[10px] uppercase tracking-[0.4em] font-black hover:bg-[#B59E85] transition-all duration-700 shadow-2xl active:scale-95"
                   >
-                    {status === 'sending' ? <Loader2 className="animate-spin" size={16} /> : "Enviar Protocolo"}
+                    {status === 'sending' ? <Loader2 className="animate-spin" size={16} /> : "Solicitar Auditoría Privada"}
                   </button>
                   <button type="button" onClick={handleWhatsAppDirect}
                     className="flex-1 px-8 py-6 border border-[#1A1A1A]/20 text-[10px] uppercase tracking-[0.4em] font-black transition-all duration-700 text-[#1A1A1A]/40 hover:text-[#1A1A1A] hover:border-[#1A1A1A] hover:bg-white active:scale-95"

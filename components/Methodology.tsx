@@ -6,18 +6,18 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
   const studioSteps = [
     {
       no: "01",
-      title: "Diagnóstico de Fricción",
-      desc: "Auditamos los puntos de fuga de autoridad en su ecosistema actual para erradicar cualquier elemento que erosione la percepción de su maestría clínica."
+      title: "¿Qué hacemos exactamente?",
+      desc: "Diseñamos y desarrollamos presencias digitales de alto nivel para clínicas médicas y estéticas que quieren transmitir autoridad real. Analizamos su web actual, detectamos puntos de fricción y construimos una estructura visual y estratégica que eleva la percepción de su clínica desde el primer segundo."
     },
     {
       no: "02",
-      title: "Blindaje de Activos",
-      desc: "Estructuramos su presencia bajo protocolos de ingeniería de alta fidelidad, asegurando que cada pixel comunique un estatus de inaccesibilidad para la competencia."
+      title: "¿Para quién es este sistema?",
+      desc: "Para clínicas privadas, centros médicos premium y especialistas que desean atraer pacientes de mayor valor. Profesionales que saben que su nivel clínico merece una presencia digital que refleje ese mismo estándar."
     },
     {
       no: "03",
-      title: "Sistemas de Selección",
-      desc: "Configuramos algoritmos de filtrado para purificar el tráfico, conectando su clínica exclusivamente con el segmento de ultra-alto valor que no cuestiona el coste."
+      title: "¿Qué resultado se obtiene?",
+      desc: "Una presencia digital diseñada para generar confianza inmediata, reforzar su posicionamiento profesional y atraer pacientes más cualificados. Su web deja de ser un simple escaparate y se convierte en una herramienta estratégica para su crecimiento."
     }
   ];
 
@@ -54,9 +54,9 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
           >
             {isLanding ? "El camino hacia la distinción" : "Nuestro método"}
           </motion.span>
-          <h2 className="font-serif text-5xl md:text-8xl tracking-tighter leading-[0.85]">
+          <h2 className="font-serif text-6xl md:text-8xl tracking-tighter leading-[0.85]">
             {isLanding ? (
-              <>El rigor técnico <br /> <span className="italic opacity-40">detrás del arte.</span></>
+              <>El rigor técnico <br /> <span className="italic opacity-40">detrás del sistema.</span></>
             ) : (
               <>La ciencia de la <br /> <span className="italic opacity-40">precisión absoluta.</span></>
             )}
@@ -83,16 +83,15 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
               </p>
               
               {/* Línea decorativa de lujo: mantenemos tu animación original */}
-              {/* Línea decorativa de lujo: Ahora con crecimiento total */}
-            <div className="mt-12 h-[1px] w-full bg-[#FAF9F6]/10 relative overflow-hidden">
-              <motion.div 
-                initial={{ width: "0%" }} // Empieza en nada
-                whileInView={{ width: "100%" }} // Se dibuja hasta el final
-                transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }} // Movimiento fluido y premium
-                viewport={{ once: true }} // Se queda dibujada una vez que aparece
-                className="absolute inset-0 bg-[#B59E85]/40"
-              />
-            </div>
+              <div className="mt-12 h-[1px] w-full bg-[#FAF9F6]/10 relative overflow-hidden">
+                <motion.div 
+                  initial={{ width: "0%" }}
+                  whileInView={{ width: "100%" }}
+                  transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true }}
+                  className="absolute inset-0 bg-[#B59E85]/40"
+                />
+              </div>
             </motion.div>
           ))}
         </div>

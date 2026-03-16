@@ -34,20 +34,21 @@ export default function Hero({
       ref={containerRef}
       className="relative h-screen min-h-[650px] flex flex-col bg-[#FAF9F6] overflow-hidden"
     >
-      {/* 1. FONDO CON PARALLAX PROFUNDO */}
+
+      {/* FONDO */}
       <motion.div 
-        className="absolute inset-0 z-0 scale-150"
+        className="absolute inset-0 z-0"
         style={{ x: springX, y: springY }}
       >
         <img 
           src="/bg.jpg" 
           alt="Background"
-          className="w-full h-full object-cover grayscale-[0.5] opacity-60"
+          className="w-full h-full object-cover object-[70%_center] grayscale-[0.5] opacity-60"
         />
         <div className="absolute inset-0 bg-[#FAF9F6]/20"></div>
       </motion.div>
 
-      {/* 2. CONTENIDO TEXTUAL: REESTRUCTURADO PARA EQUILIBRIO IZQUIERDA/DERECHA */}
+      {/* CONTENIDO */}
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-24 select-none pointer-events-none">
         
         <motion.div 
@@ -61,28 +62,46 @@ export default function Hero({
           </span>
         </motion.div>
 
-        {/* CONTENEDOR GRID: H1 Izquierda | Descripción Derecha */}
-        <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-10">
+        {/* Ajuste de posición: -mt-20 en mobile para subir el bloque del H1 */}
+        <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-10 -mt-30 md:mt-0">
           
-          {/* H1: Izquierda y tamaño ajustado */}
-          <motion.h1 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-[13vw] md:text-[7vw] leading-[0.85] tracking-[-0.05em] flex flex-col relative z-10"
-          >
-            <span className="text-[#B59E85] italic font-light">
-              {isLanding ? "Autoridad Visual" : "Elegancia"}
-            </span>
-            <motion.span 
-              style={{ x: useTransform(springX, (v) => v * -1.5) }}
-              className="text-[#1A1A1A] self-start mt-2"
-            >
-              {isLanding ? "Para Clínicas de Élite." : "Clínica."}
-            </motion.span>
-          </motion.h1>
+          {/* Bloque de Título y Frase de Claridad */}
+          <div className="flex flex-col relative z-10">
+            {/* FRASE DE CLARIDAD PARA GOOGLE ADS */}
+            {isLanding && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, delay: 0.8 }}
+                className="mb-4 md:mb-6"
+              >
+                <h2 className="text-[9px] md:text-[11px] uppercase tracking-[0.35em] text-[#B59E85] font-black leading-relaxed max-w-md">
+                  Ingeniería visual para clínicas que deciden atraer pacientes de alto valor, no volumen.
+                </h2>
+              </motion.div>
+            )}
 
-          {/* DESCRIPCIÓN: Derecha y centrada verticalmente con el H1 */}
+            {/* H1 */}
+            <motion.h1 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
+              className="font-serif text-[13vw] md:text-[7vw] leading-[0.85] tracking-[-0.05em] flex flex-col"
+            >
+              <span className="text-[#B59E85] italic font-light">
+                {isLanding ? "Prestigio Clínico" : "Elegancia"}
+              </span>
+
+              <motion.span 
+                style={{ x: useTransform(springX, (v) => v * -1.5) }}
+                className="text-[#1A1A1A] self-start mt-2"
+              >
+                {isLanding ? "Autoridad Digital." : "Clínica."}
+              </motion.span>
+            </motion.h1>
+          </div>
+
+          {/* DESCRIPCIÓN */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
@@ -91,19 +110,19 @@ export default function Hero({
           >
             <p className="text-[#1A1A1A] text-[9px] md:text-[11px] leading-[2.4] uppercase tracking-[0.35em] font-bold">
               {isLanding 
-                ? "Elevamos el estándar digital de centros médicos que rechazan lo genérico. Creamos marcas de prestigio para clínicas que operan en el nivel superior."
+                ? "Si su clínica es premium, su presencia digital también debe serlo. Diseñamos ecosistemas de autoridad que proyectan distinción y atraen al paciente más cualificado del mercado."
                 : "Donde la precisión científica se encuentra con la armonía visual absoluta."
               }
             </p>
           </motion.div>
         </div>
 
-        {/* 3. BOTÓN: CENTRADO INFERIORMENTE */}
+        {/* BOTÓN */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, delay: 1.8 }}
-          className="pointer-events-auto z-50 absolute bottom-[10%] left-1/2 -translate-x-1/2"
+          className="pointer-events-auto z-50 absolute bottom-[8%] md:bottom-[10%] left-1/2 -translate-x-1/2"
         >
           <button 
             type="button"
@@ -114,12 +133,15 @@ export default function Hero({
             }}
             className="group relative flex flex-col items-center outline-none cursor-pointer"
           >
-            <div className="w-28 h-28 md:w-44 md:h-44 rounded-full border border-[#1A1A1A]/10 flex items-center justify-center relative overflow-hidden transition-all duration-[1500ms] ease-[0.22, 1, 0.36, 1] bg-white/40 group-hover:border-[#B59E85]/60 group-hover:bg-white/80">
-              <div className="absolute inset-0 bg-[#B59E85] translate-y-full group-hover:translate-y-0 transition-transform duration-[1000ms] ease-[0.22, 1, 0.36, 1]" />
+            <div className="w-28 h-28 md:w-44 md:h-44 rounded-full border border-[#1A1A1A]/10 flex items-center justify-center relative overflow-hidden transition-all duration-[1500ms] ease-[0.22,1,0.36,1] bg-white/40 group-hover:border-[#B59E85]/60 group-hover:bg-white/80">
+              
+              <div className="absolute inset-0 bg-[#B59E85] translate-y-full group-hover:translate-y-0 transition-transform duration-[1000ms] ease-[0.22,1,0.36,1]" />
+              
               <span className="relative z-10 text-[7px] md:text-[10px] uppercase tracking-[0.5em] font-black text-[#1A1A1A] group-hover:text-white transition-colors duration-700 text-center leading-tight px-4">
-                {isLanding ? "Solicitar Evaluación Privada" : "Agendar Consulta"}
+                {isLanding ? "Solicitar Auditoría Privada" : "Agendar Consulta"}
               </span>
             </div>
+
             <span className="text-[6px] md:text-[7px] uppercase tracking-[0.5em] mt-5 opacity-20 font-bold group-hover:opacity-60 transition-opacity duration-1000">
               Admission Reserved
             </span>
@@ -127,12 +149,10 @@ export default function Hero({
         </motion.div>
       </div>
 
-      {/* Marca de agua de fondo */}
       <div className="absolute bottom-16 left-[-5%] font-serif italic text-[14vw] text-[#1A1A1A]/[0.02] pointer-events-none select-none z-0">
         Prestige
       </div>
 
-      {/* Indicador de Scroll */}
       <div className="absolute bottom-6 left-6 md:left-24 h-12 w-[1px] bg-[#1A1A1A]/10 overflow-hidden z-20">
         <motion.div 
           animate={{ y: [-48, 48] }}
@@ -140,6 +160,7 @@ export default function Hero({
           className="w-full h-full bg-[#B59E85]/40"
         />
       </div>
+
     </section>
   );
 }
