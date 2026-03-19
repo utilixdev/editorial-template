@@ -35,7 +35,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "UtiLiX Studio | El Estándar en Autoridad de Marca para la Élite Clínica",
+    // UNIFICADO: Ahora el móvil priorizará este título que es el que tú quieres
+    title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
     description: "Sustituimos la dependencia social por arquitecturas digitales de alto impacto. Blindaje de marca y captación estratégica en zonas de alto valor.",
     siteName: "UtiLiX Studio",
     locale: "es_ES",
