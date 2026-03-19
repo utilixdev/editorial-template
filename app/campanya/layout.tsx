@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL (Sin cambios aquí)
+  // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL
   title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
   description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
-  // KEYWORDS (Manteniendo todas tus líneas)
+  // KEYWORDS (Manteniendo todas tus líneas intactas)
   keywords: [
     "consultoría autoridad de marca médica",
     "ingeniería visual clínicas estéticas",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios"
   ],
 
-  authors: [{ name: "UtiLiX Studio", url: "https://utilixstudio.com" }],
+  authors: [{ name: "UtiLiX Studio" }], // Sin URL para evitar bucles
   
   other: {
     "geo.region": "ES",
@@ -37,13 +37,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "UtiLiX Studio | El Estándar en Autoridad de Marca para la Élite Clínica",
     description: "Sustituimos la dependencia social por arquitecturas digitales de alto impacto. Blindaje de marca y captación estratégica en zonas de alto valor.",
-    url: "https://utilixstudio.com/campanya", // Quitamos el WWW aquí para ver si Vercel prefiere la raíz
     siteName: "UtiLiX Studio",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "/og-image-luxury.jpg", // Volvemos a ruta relativa, es más estable si la URL base falla
+        url: "/og-image-luxury.jpg", // Ruta relativa absoluta para el servidor
         width: 1200,
         height: 630,
         alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico",
@@ -71,8 +70,7 @@ export default function CampanyaLayout({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca",
-            "image": "https://utilixstudio.com/logo-premium.png",
-            "url": "https://utilixstudio.com/campanya",
+            "image": "/logo-premium.png",
             "priceRange": "€€€",
             "description": "Desarrollo de protocolos de autoridad de marca para el sector médico-estético. Especialistas en desmarcar clínicas de alto nivel frente a su competencia mediante ingeniería visual y sistemas avanzados de captación digital.",
             "address": {
