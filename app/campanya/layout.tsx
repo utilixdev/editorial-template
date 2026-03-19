@@ -1,19 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // CONFIGURACIÓN DE BASE: Vital para evitar errores de renderizado en Next.js 13/14/15
-  metadataBase: new URL('https://www.utilixstudio.com'),
-
-  // TÍTULO: Posicionamiento como autoridad técnica y estratégica
+  // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL (Sin cambios aquí)
   title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
   description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
-  // URL CANÓNICA: Evita bucles de redirección (HTTP 308) que dejan la página en blanco
-  alternates: {
-    canonical: 'https://www.utilixstudio.com/campanya',
-  },
-
-  // KEYWORDS SOBREALIMENTADAS: Coincidencia exacta con tus radios de Ads y terminología Senior
+  // KEYWORDS (Manteniendo todas tus líneas)
   keywords: [
     "consultoría autoridad de marca médica",
     "ingeniería visual clínicas estéticas",
@@ -33,9 +25,8 @@ export const metadata: Metadata = {
     "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios"
   ],
 
-  authors: [{ name: "UtiLiX Studio", url: "https://www.utilixstudio.com" }],
+  authors: [{ name: "UtiLiX Studio", url: "https://utilixstudio.com" }],
   
-  // GEOTARGETING ESPECÍFICO DE CAMPAÑA
   other: {
     "geo.region": "ES",
     "geo.placename": "Madrid Serrano, Barcelona Turó Park, Marbella Zagaleta, Bilbao Abando, Málaga Larios, Valencia Colón",
@@ -46,13 +37,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "UtiLiX Studio | El Estándar en Autoridad de Marca para la Élite Clínica",
     description: "Sustituimos la dependencia social por arquitecturas digitales de alto impacto. Blindaje de marca y captación estratégica en zonas de alto valor.",
-    url: "https://www.utilixstudio.com/campanya",
+    url: "https://utilixstudio.com/campanya", // Quitamos el WWW aquí para ver si Vercel prefiere la raíz
     siteName: "UtiLiX Studio",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "https://www.utilixstudio.com/og-image-luxury.jpg", // URL Absoluta para evitar pantalla en blanco
+        url: "/og-image-luxury.jpg", // Volvemos a ruta relativa, es más estable si la URL base falla
         width: 1200,
         height: 630,
         alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico",
@@ -63,11 +54,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-    },
   },
 };
 
@@ -78,7 +64,6 @@ export default function CampanyaLayout({
 }) {
   return (
     <>
-      {/* JSON-LD PLUTONIO: EL MOTOR DE BÚSQUEDA NIVEL 10/10 CON VOCABULARIO ESTRATÉGICO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -86,8 +71,8 @@ export default function CampanyaLayout({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca",
-            "image": "https://www.utilixstudio.com/logo-premium.png",
-            "url": "https://www.utilixstudio.com/campanya",
+            "image": "https://utilixstudio.com/logo-premium.png",
+            "url": "https://utilixstudio.com/campanya",
             "priceRange": "€€€",
             "description": "Desarrollo de protocolos de autoridad de marca para el sector médico-estético. Especialistas en desmarcar clínicas de alto nivel frente a su competencia mediante ingeniería visual y sistemas avanzados de captación digital.",
             "address": {
