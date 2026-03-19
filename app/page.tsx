@@ -19,6 +19,13 @@ export default function CampanyaPage() {
 
   return (
     <main className="bg-[#FAF9F6] relative w-full overflow-hidden">
+      
+      {/* BLOQUE SEO INVISIBLE (H1 ESTRATÉGICO): 
+          Inyectamos las ciudades clave del listado para que Google Ads detecte relevancia inmediata.
+      */}
+      <h1 className="sr-only">
+        Ingeniería Visual y Marketing para Clínicas Estéticas de Lujo. Especialistas en Rediseño Web Médico en Madrid (Serrano), Barcelona (Turó Park), Marbella (Zagaleta), Bilbao (Abando) y San Sebastián.
+      </h1>
 
       <Hero 
         isLanding={true} 
@@ -32,6 +39,9 @@ export default function CampanyaPage() {
 
       <VisionConcepts />
 
+      {/* SECCIÓN DE CIERRE VITAMINADA: 
+          Copy adaptado para clínicas "Instagram-Only" y webs obsoletas.
+      */}
       <section className="py-24 flex flex-col items-center bg-[#1A1A1A] text-[#FAF9F6] relative">
 
         <motion.div 
@@ -52,9 +62,10 @@ export default function CampanyaPage() {
           </h2>
 
           <p className="max-w-2xl mx-auto mb-20 text-[11px] md:text-[13px] uppercase tracking-[0.35em] leading-[2.5] opacity-60 font-medium">
+            Si su presencia digital se limita a Instagram o a una plataforma obsoleta, su autoridad técnica está en riesgo. 
             No somos una agencia de plantillas; somos su departamento de ingeniería visual.
-            Diseñamos activos que legitiman sus honorarios y filtran su audiencia
-            hacia el segmento de alto valor.
+            Diseñamos activos que legitiman sus honorarios, sustituyen la mediocridad técnica y filtran su audiencia
+            hacia el segmento de alto valor en los puntos más exclusivos de España.
           </p>
 
           <button 
@@ -66,11 +77,26 @@ export default function CampanyaPage() {
 
         </motion.div>
 
+        {/* Marca de agua de fondo */}
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
           <span className="font-serif italic text-[30vw]">Prestige</span>
         </div>
 
       </section>
+
+      {/* PIE DE PÁGINA SEO LOCAL (LISTADO NUCLEAR DE 26 PUNTOS): 
+          Esto garantiza que tus anuncios de 5km tengan una "landing page" 100% relevante para Google.
+      */}
+      <div className="bg-[#FAF9F6] py-12 text-center px-6">
+        <p className="max-w-5xl mx-auto text-[7.5px] uppercase tracking-[0.15em] opacity-30 leading-relaxed">
+          Ingeniería Visual activa en: Madrid (Serrano, Almagro, El Viso, Castellana, La Moraleja, General Oráa) — 
+          Barcelona (Turó Park, Pedralbes, Passeig de Gràcia, Sarrià, Diagonal, Sant Cugat) — 
+          Marbella (La Zagaleta, Sierra Blanca, Puerto Banús, Nueva Andalucía) — 
+          Bilbao (Abando) — San Sebastián (Paseo de la Concha) — 
+          Valencia (Colón, Eixample, La Pau) — Málaga (Larios, Limonar) — 
+          Pozuelo (Av. Europa) — Tarragona (Rambla Nova) — Girona (S'Agaró).
+        </p>
+      </div>
 
       <Footer />
 
