@@ -1,11 +1,22 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // TÍTULO: Ataca el estatus y la autoridad
-  title: "De Instagram a la Autoridad Médica | Protocolo de Ingeniería Visual",
-  description: "Especialistas en elevar clínicas estéticas que dependen de Instagram o webs obsoletas. Rediseño de activos digitales para captar pacientes de alto valor en Serrano, Turó Park, Zagaleta y Abando.",
+  // TÍTULO: Posicionamiento como autoridad técnica y estratégica
+  title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
+  description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
+  // KEYWORDS SOBREALIMENTADAS: Coincidencia exacta con tus radios de Ads y terminología Senior
   keywords: [
+    "consultoría autoridad de marca médica",
+    "ingeniería visual clínicas estéticas",
+    "captación pacientes alto valor Madrid",
+    "estrategia digital sector lujo Barcelona",
+    "branding médico exclusivo Marbella",
+    "digitalización clínicas medicina estética Serrano",
+    "auditoría de marca médica Turó Park",
+    "desarrollo activos digitales de alta conversión",
+    "diferenciación competitiva sector estético lujo",
+    "UtiLiX Studio consultoría estratégica",
     "marketing clínica estética Serrano", "diseño web lujo Turó Park", 
     "branding médico La Zagaleta", "marketing estético Abando Bilbao", 
     "sustituir instagram por web médica", "autoridad digital médicos estética",
@@ -16,6 +27,7 @@ export const metadata: Metadata = {
 
   authors: [{ name: "UtiLiX Studio", url: "https://www.utilixstudio.com" }],
   
+  // GEOTARGETING ESPECÍFICO DE CAMPAÑA
   other: {
     "geo.region": "ES",
     "geo.placename": "Madrid Serrano, Barcelona Turó Park, Marbella Zagaleta, Bilbao Abando, Málaga Larios, Valencia Colón",
@@ -24,9 +36,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "UtiLiX Studio | El Estándar Digital para la Élite Clínica",
-    description: "Sustituimos la imagen 'pobre' de Instagram por activos de ingeniería visual. Exclusivo para clínicas de alto valor.",
-    url: "https://www.utilixstudio.com/campanya", // URL Absoluta con WWW
+    title: "UtiLiX Studio | El Estándar en Autoridad de Marca para la Élite Clínica",
+    description: "Sustituimos la dependencia social por arquitecturas digitales de alto impacto. Blindaje de marca y captación estratégica en zonas de alto valor.",
+    url: "https://www.utilixstudio.com/campanya",
     siteName: "UtiLiX Studio",
     locale: "es_ES",
     type: "website",
@@ -35,7 +47,7 @@ export const metadata: Metadata = {
         url: "https://www.utilixstudio.com/og-image-luxury.jpg", // URL Absoluta para evitar pantalla en blanco
         width: 1200,
         height: 630,
-        alt: "UtiLiX Studio - Ingeniería Visual Premium",
+        alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico",
       },
     ],
   },
@@ -58,17 +70,18 @@ export default function CampanyaLayout({
 }) {
   return (
     <>
+      {/* JSON-LD PLUTONIO: EL MOTOR DE BÚSQUEDA NIVEL 10/10 CON VOCABULARIO ESTRATÉGICO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "UtiLiX Studio - Protocolo de Campaña",
+            "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca",
             "image": "https://www.utilixstudio.com/logo-premium.png",
             "url": "https://www.utilixstudio.com/campanya",
             "priceRange": "€€€",
-            "description": "Ingeniería Visual para elevar marcas médicas. Transformamos clínicas con imagen 'pobre' en Instagram en autoridades digitales de alto standing.",
+            "description": "Desarrollo de protocolos de autoridad de marca para el sector médico-estético. Especialistas en desmarcar clínicas de alto nivel frente a su competencia mediante ingeniería visual y sistemas avanzados de captación digital.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Madrid",
@@ -77,7 +90,7 @@ export default function CampanyaLayout({
             },
             "areaServed": [
               { "@type": "Place", "name": "5km Abando, Bilbao" },
-              { "@type": "Place", "name": "5km Avenida de Europa, Pozuelo de Alarcón" },
+              { "@type": "Place", "name": "5km Avenida de Europa, Pozuelo" },
               { "@type": "Place", "name": "5km Calle Almagro, Madrid" },
               { "@type": "Place", "name": "5km Calle Larios, Málaga" },
               { "@type": "Place", "name": "5km Calle Serrano, Madrid" },
@@ -88,7 +101,7 @@ export default function CampanyaLayout({
               { "@type": "Place", "name": "5km El Limonar, Málaga" },
               { "@type": "Place", "name": "5km El Viso, Madrid" },
               { "@type": "Place", "name": "5km La Moraleja, Alcobendas" },
-              { "@type": "Place", "name": "3km La Zagaleta, Benahavís" },
+              { "@type": "Place", "name": "3km La Zagaleta, Marbella" },
               { "@type": "Place", "name": "5km Nueva Andalucía, Marbella" },
               { "@type": "Place", "name": "5km Paseo de la Castellana, Madrid" },
               { "@type": "Place", "name": "5km Paseo de la Concha, San Sebastián" },
@@ -105,10 +118,11 @@ export default function CampanyaLayout({
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Protocolo de Transformación Clínica",
+              "name": "Servicios de Elevación de Marca y Captación",
               "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sustitución de Instagram por Activos de Autoridad" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ingeniería Visual para Marcas Médicas de Lujo" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transición de Perfiles Sociales a Ecosistemas de Autoridad" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de Diferenciación Competitiva Médica" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ingeniería Visual de Activos para Pacientes High-End" } }
               ]
             }
           }),
