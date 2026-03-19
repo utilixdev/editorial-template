@@ -1,10 +1,18 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  // CONFIGURACIÓN DE BASE: Vital para evitar errores de renderizado en Next.js 13/14/15
+  metadataBase: new URL('https://www.utilixstudio.com'),
+
   // TÍTULO: Posicionamiento como autoridad técnica y estratégica
   title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
   description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
+  // URL CANÓNICA: Evita bucles de redirección (HTTP 308) que dejan la página en blanco
+  alternates: {
+    canonical: 'https://www.utilixstudio.com/campanya',
+  },
+
   // KEYWORDS SOBREALIMENTADAS: Coincidencia exacta con tus radios de Ads y terminología Senior
   keywords: [
     "consultoría autoridad de marca médica",
