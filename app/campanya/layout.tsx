@@ -1,25 +1,21 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // TÍTULO PLUTONIO: Ataca el problema (Instagram) y da la solución (Ingeniería)
-  title: "Protocolo de Ingeniería Visual | De Instagram a la Autoridad Médica",
-  description: "Exclusivo para clínicas en Serrano, Turó Park, Zagaleta y Abando. Sustituimos la mediocridad digital por activos de ingeniería visual que legitiman sus honorarios y atraen pacientes de alto valor.",
+  // TÍTULO: Ataca el estatus y la autoridad
+  title: "De Instagram a la Autoridad Médica | Protocolo de Ingeniería Visual",
+  description: "Especialistas en elevar clínicas estéticas que dependen de Instagram o webs obsoletas. Rediseño de activos digitales para captar pacientes de alto valor en Serrano, Turó Park, Zagaleta y Abando.",
   
-  // KEYWORDS SOBREALIMENTADAS: Coincidencia exacta con tus radios de Ads
   keywords: [
     "marketing clínica estética Serrano", "diseño web lujo Turó Park", 
     "branding médico La Zagaleta", "marketing estético Abando Bilbao", 
+    "sustituir instagram por web médica", "autoridad digital médicos estética",
+    "rediseño web clínica estética de lujo", "captar pacientes estética premium",
     "UtiLiX Studio", "Ingeniería Visual clínicas", "marketing médico Marbella",
-    "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios",
-    "web premium Pozuelo Avenida Europa", "marketing médico Almagro",
-    "autoridad digital médicos estética", "vender tratamientos sin instagram",
-    "rediseño web clínica estética de lujo", "marketing estético Sant Cugat",
-    "branding médico Paseo de la Concha", "marketing estético Valencia Colón"
+    "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios"
   ],
 
-  authors: [{ name: "UtiLiX Studio", url: "https://utilixstudio.com" }],
+  authors: [{ name: "UtiLiX Studio", url: "https://www.utilixstudio.com" }],
   
-  // GEOTARGETING ESPECÍFICO DE CAMPAÑA
   other: {
     "geo.region": "ES",
     "geo.placename": "Madrid Serrano, Barcelona Turó Park, Marbella Zagaleta, Bilbao Abando, Málaga Larios, Valencia Colón",
@@ -29,14 +25,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "UtiLiX Studio | El Estándar Digital para la Élite Clínica",
-    description: "Diseño de activos que legitiman sus honorarios en Serrano, Pedralbes y La Zagaleta. Auditoría de transformación disponible.",
-    url: "https://utilixstudio.com/campanya",
+    description: "Sustituimos la imagen 'pobre' de Instagram por activos de ingeniería visual. Exclusivo para clínicas de alto valor.",
+    url: "https://www.utilixstudio.com/campanya", // URL Absoluta con WWW
     siteName: "UtiLiX Studio",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "/og-image-luxury.jpg", // La recepción escultural
+        url: "https://www.utilixstudio.com/og-image-luxury.jpg", // URL Absoluta para evitar pantalla en blanco
         width: 1200,
         height: 630,
         alt: "UtiLiX Studio - Ingeniería Visual Premium",
@@ -62,7 +58,6 @@ export default function CampanyaLayout({
 }) {
   return (
     <>
-      {/* JSON-LD PLUTONIO: EL MOTOR DE BÚSQUEDA NIVEL 10/10 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -70,10 +65,10 @@ export default function CampanyaLayout({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "UtiLiX Studio - Protocolo de Campaña",
-            "image": "https://utilixstudio.com/logo-premium.png",
-            "url": "https://utilixstudio.com/campanya",
+            "image": "https://www.utilixstudio.com/logo-premium.png",
+            "url": "https://www.utilixstudio.com/campanya",
             "priceRange": "€€€",
-            "description": "Ingeniería Visual y rediseño de autoridad para clínicas estéticas. Especialistas en convertir perfiles de Instagram en plataformas de alta conversión para pacientes VIP.",
+            "description": "Ingeniería Visual para elevar marcas médicas. Transformamos clínicas con imagen 'pobre' en Instagram en autoridades digitales de alto standing.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Madrid",
@@ -110,11 +105,10 @@ export default function CampanyaLayout({
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Catálogo de Ingeniería Visual",
+              "name": "Protocolo de Transformación Clínica",
               "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sustitución de Instagram por Web de Autoridad" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño Web para Clínicas en Zonas de Élite" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Filtro de Audiencia de Alto Valor" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sustitución de Instagram por Activos de Autoridad" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ingeniería Visual para Marcas Médicas de Lujo" } }
               ]
             }
           }),
