@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios"
   ],
 
-  authors: [{ name: "UtiLiX Studio" }], // Sin URL para evitar bucles
+  authors: [{ name: "UtiLiX Studio" }], 
   
   other: {
     "geo.region": "ES",
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    // UNIFICADO: Ahora el móvil priorizará este título que es el que tú quieres
     title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
     description: "Sustituimos la dependencia social por arquitecturas digitales de alto impacto. Blindaje de marca y captación estratégica en zonas de alto valor.",
     siteName: "UtiLiX Studio",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image-luxury.jpg", // Ruta relativa absoluta para el servidor
+        url: "/og-image-luxury.jpg",
         width: 1200,
         height: 630,
         alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico",
