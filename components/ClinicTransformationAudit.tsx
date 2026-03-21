@@ -12,7 +12,7 @@ export default function ClinicTransformationAudit() {
   ]
 
   return (
-    <section className="relative py-24 px-6 md:px-24 bg-[#FAF9F6] overflow-hidden">
+    <section id="auditoria" className="relative py-24 px-6 md:px-24 bg-[#FAF9F6] overflow-hidden">
       
       {/* Background Decorativo */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
@@ -94,16 +94,16 @@ export default function ClinicTransformationAudit() {
           {/* CONTENEDOR DE IMAGEN AJUSTADO */}
           <div className="relative group w-full max-w-5xl mx-auto">
             {/* CAMBIO CLAVE: 
-               - Quitamos aspect-video para que el contenedor se adapte a la imagen
-               - bg-[#1A1A1A] por si la imagen tiene transparencias
+                - Quitamos aspect-video para que el contenedor se adapte a la imagen
+                - bg-[#1A1A1A] por si la imagen tiene transparencias
             */}
             <div className="relative bg-[#1A1A1A] rounded-xl overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border border-white/10">
               <img 
                 src="/after.jpg?v=4" 
                 alt="Utilix Studio Premium Result"
                 /* CAMBIO CLAVE: 
-                   - 'w-full h-auto' y quitar 'object-cover' asegura que la imagen se vea INTEGRAL 
-                   - 'group-hover:scale-[1.02]' un zoom mucho más sutil para no comerse los bordes
+                    - 'w-full h-auto' y quitar 'object-cover' asegura que la imagen se vea INTEGRAL 
+                    - 'group-hover:scale-[1.02]' un zoom mucho más sutil para no comerse los bordes
                 */
                 className="w-full h-auto block opacity-95 transition-transform duration-700 group-hover:scale-[1.01]"
               />
@@ -114,7 +114,7 @@ export default function ClinicTransformationAudit() {
 
             {/* DETALLES DE AUTORÍA MINIMALISTAS */}
             <div className="mt-6 flex justify-between items-center px-2">
-               <div className="flex gap-12 md:gap-12">
+                <div className="flex gap-12 md:gap-12">
                   <div className="flex flex-col">
                     <span className="text-[4px] md:text-[6px] uppercase tracking-[0.3em] text-[#1A1A1A]/40">Intervención</span>
                     <span className="text-[6px] md:text-[8px] uppercase tracking-[0.1em] font-bold text-[#1A1A1A]">Arquitectura de Autoridad</span>
@@ -123,8 +123,8 @@ export default function ClinicTransformationAudit() {
                     <span className="text-[5px] md:text-[6px] uppercase tracking-[0.3em] text-[#1A1A1A]/40">Estado</span>
                     <span className="text-[6px] md:text-[8px] uppercase tracking-[0.2em] font-bold text-[#B59E85]">Ejecutado</span>
                   </div>
-               </div>
-               <p className="text-[8px] md:text-[10px] font-serif italic text-[#B59E85] text-base md:text-xl opacity-80">UtilixStudio ©</p>
+                </div>
+                <p className="text-[8px] md:text-[10px] font-serif italic text-[#B59E85] text-base md:text-xl opacity-80">UtilixStudio ©</p>
             </div>
           </div>
         </motion.div>

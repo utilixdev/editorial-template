@@ -30,7 +30,7 @@ const concepts = [
 
 export default function VisionConcepts() {
   return (
-<section className="bg-[#FAF9F6] pt-24 pb-0 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
+<section id="vision" className="bg-[#FAF9F6] pt-24 pb-0 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         <motion.div 

@@ -42,7 +42,7 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
   const steps = isLanding ? studioSteps : clinicSteps;
 
   return (
-      <section className="bg-[#1A1A1A] text-[#FAF9F6] pt-32 md:pt-48 pb-12 md:pb-20 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
+      <section id="metodologia" className="bg-[#1A1A1A] text-[#FAF9F6] pt-32 md:pt-48 pb-12 md:pb-20 px-6 md:px-24 border-t border-[#1A1A1A]/5 overflow-hidden">
       <div className="px-6 md:px-24 max-w-7xl mx-auto">
         
         {/* Cabecera del método */}

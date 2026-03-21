@@ -25,11 +25,20 @@ export default function CampanyaPage() {
         onOpenPopup={scrollToContacto} 
       />
 
-      <ClinicTransformationAudit />
+      {/* Blindaje de ID: Auditoría */}
+      <div id="auditoria">
+        <ClinicTransformationAudit />
+      </div>
 
-      <Methodology isLanding={true} />
+      {/* Blindaje de ID: Metodología */}
+      <div id="metodologia">
+        <Methodology isLanding={true} />
+      </div>
 
-      <VisionConcepts />
+      {/* Blindaje de ID: Visión */}
+      <div id="vision">
+        <VisionConcepts />
+      </div>
 
       <section className="py-24 flex flex-col items-center bg-[#1A1A1A] text-[#FAF9F6] relative">
         <motion.div 
@@ -72,7 +81,10 @@ export default function CampanyaPage() {
         </p>
       </aside>
 
-      <Footer />
+      {/* Blindaje de ID: Contacto */}
+      <div id="contacto">
+        <Footer />
+      </div>
     </main>
   );
 }
