@@ -108,11 +108,11 @@ export default function Navigation({ isLanding = false }: { isLanding?: boolean 
               transition={{ delay: 0.7 }}
             >
               <Link 
-                href={isLanding ? "#contacto" : "/reserva"}
+                href={isLanding ? "#contacto" : "/contacto"}
                 onClick={() => setIsOpen(false)}
                 className="px-10 py-4 border border-[#B59E85] text-[#B59E85] text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-[#B59E85] hover:text-white transition-all duration-700 shadow-lg shadow-[#B59E85]/10"
               >
-                {isLanding ? "Iniciar Auditoría" : "Reservar Cita"}
+                {isLanding ? "Iniciar Auditoría" : "Iniciar Auditoría"}
               </Link>
             </motion.div>
 
@@ -127,8 +127,8 @@ export default function Navigation({ isLanding = false }: { isLanding?: boolean 
                 
                 <div className="flex flex-col items-center md:items-end gap-6">
                     <div className="flex gap-8 text-[9px] uppercase tracking-[0.3em] text-white/40 font-bold">
-                      <a href="#" className="hover:text-[#B59E85] transition-colors">Instagram</a>
-                      <a href="#" className="hover:text-[#B59E85] transition-colors">LinkedIn</a>
+                      <a href="https://www.instagram.com/utilix.tech/" className="hover:text-[#B59E85] transition-colors">Instagram</a>
+                      <a href="https://www.linkedin.com/in/barucnsue/" className="hover:text-[#B59E85] transition-colors">LinkedIn</a>
                     </div>
                     <span className="text-white/10 text-[8px] uppercase tracking-[0.8em]">MMXXVI</span>
                 </div>
