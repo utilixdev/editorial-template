@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Script from "next/script"; // Importación necesaria para las etiquetas de Google
+import Script from "next/script";
 
 export const metadata: Metadata = {
   // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL
@@ -64,17 +64,26 @@ export default function CampanyaLayout({
 }) {
   return (
     <>
-      {/* Google Tag (gtag.js) - AW-942717987 */}
+      {/* 1. VITAMINA DE RENDIMIENTO: Pre-conexión a dominios de Google */}
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://www.googleadservices.com" />
+      <link rel="dns-prefetch" href="https://www.google.com" />
+
+      {/* 2. VITAMINA DE RENDIMIENTO: Cambiamos afterInteractive por lazyOnload 
+          Esto hace que el script espere a que la web esté totalmente ociosa */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-942717987"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-ads-tag" strategy="afterInteractive">
+      <Script id="google-ads-tag" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'AW-942717987');
+          gtag('config', 'AW-942717987', {
+            'send_page_view': true,
+            'cookie_flags': 'SameSite=None;Secure'
+          });
         `}
       </Script>
 
@@ -85,7 +94,7 @@ export default function CampanyaLayout({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca",
-            "image": "/logo-premium.png",
+            "image": "https://www.utilixstudio.com/logo-premium.png", // URL absoluta para mejor SEO
             "priceRange": "€€€",
             "description": "Desarrollo de protocolos de autoridad de marca para el sector médico-estético. Especialistas en desmarcar clínicas de alto nivel frente a su competencia mediante ingeniería visual y sistemas avanzados de captación digital.",
             "address": {

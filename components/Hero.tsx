@@ -35,14 +35,15 @@ export default function Hero({
       className="relative h-screen min-h-[650px] flex flex-col bg-[#FAF9F6] overflow-hidden"
     >
 
-      {/* FONDO */}
+      {/* FONDO VITAMINADO: Carga prioritaria para mejorar el LCP */}
       <motion.div 
         className="absolute inset-0 z-0"
         style={{ x: springX, y: springY }}
       >
         <img 
           src="/bg.jpg" 
-          alt="Background"
+          alt="Atmósfera de lujo y autoridad visual - UtiLiX Studio"
+          {...({ fetchPriority: "high" } as any)} 
           className="w-full h-full object-cover object-[70%_center] grayscale-[0.5] opacity-60"
         />
         <div className="absolute inset-0 bg-[#FAF9F6]/20"></div>
@@ -62,12 +63,10 @@ export default function Hero({
           </span>
         </motion.div>
 
-        {/* Ajuste de posición: -mt-20 en mobile para subir el bloque del H1 */}
         <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-10 -mt-30 md:mt-0">
           
-          {/* Bloque de Título y Frase de Claridad */}
+          {/* Bloque de Título */}
           <div className="flex flex-col relative z-10">
-            {/* FRASE DE CLARIDAD PARA GOOGLE ADS */}
             {isLanding && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -81,7 +80,6 @@ export default function Hero({
               </motion.div>
             )}
 
-            {/* H1 */}
             <motion.h1 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -117,7 +115,7 @@ export default function Hero({
           </motion.div>
         </div>
 
-        {/* BOTÓN */}
+        {/* BOTÓN VITAMINADO: Con Aria-Label para subir Accesibilidad al 100 */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -126,6 +124,7 @@ export default function Hero({
         >
           <button 
             type="button"
+            aria-label={isLanding ? "Solicitar Auditoría de Autoridad" : "Agendar Consulta Directa"}
             onClick={(e) => {
               e.stopPropagation();
               if (isLanding && onOpenPopup) onOpenPopup();
