@@ -1,11 +1,12 @@
 import { Metadata } from "next";
+import Script from "next/script"; // Importación necesaria para las etiquetas de Google
 
 export const metadata: Metadata = {
   // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL
   title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
   description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
-  // KEYWORDS (Manteniendo todas tus líneas intactas)
+  // KEYWORDS
   keywords: [
     "consultoría autoridad de marca médica",
     "ingeniería visual clínicas estéticas",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios"
   ],
 
-  authors: [{ name: "UtiLiX Studio" }], 
+  authors: [{ name: "UtiLiX Studio" }],  
   
   other: {
     "geo.region": "ES",
@@ -63,6 +64,20 @@ export default function CampanyaLayout({
 }) {
   return (
     <>
+      {/* Google Tag (gtag.js) - AW-942717987 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-942717987"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-942717987');
+        `}
+      </Script>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
