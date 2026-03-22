@@ -2,28 +2,56 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL
-  title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
+  // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL - Vitaminado con intención de búsqueda real
+  title: "Diseño Web Clínicas Estéticas de Lujo | Ingeniería Visual y Autoridad Médica High-End",
   description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
-  // KEYWORDS
+  // KEYWORDS - Inyección masiva de términos de negocio y "bata blanca"
   keywords: [
-    "consultoría autoridad de marca médica",
-    "ingeniería visual clínicas estéticas",
-    "captación pacientes alto valor Madrid",
+    // Intención Directa (Lo que buscan cuando necesitan una web)
+    "diseño web medicina estética de lujo",
+    "mejor agencia marketing médico estética",
+    "crear página web para clínica estética",
+    "especialistas en branding para médicos",
+    "marketing para cirujanos plásticos madrid",
+    "agencia diseño web premium para doctores",
+    "desarrollo web sector estético barcelona",
+    
+    // El Lenguaje del Doctor (Problema/Solución)
+    "cómo captar pacientes de alto valor estética",
+    "posicionamiento seo para clínicas médicas",
+    "exclusividad digital para médicos estética",
+    "autoridad digital médicos estética",
+    "sustituir instagram por web médica",
+    "captar pacientes estética premium",
+    "atraer pacientes medicina estética lujo",
+    "diferenciación competitiva sector estético lujo",
+    "auditoría de marca médica Turó Park",
+    
+    // Ubicaciones de Poder (Filtro por zona de alto nivel)
+    "marketing clínica estética Serrano", 
+    "diseño web lujo Turó Park", 
+    "branding médico La Zagaleta", 
+    "marketing estético Abando Bilbao", 
+    "clínica estética Calle Larios autoridad",
     "estrategia digital sector lujo Barcelona",
     "branding médico exclusivo Marbella",
     "digitalización clínicas medicina estética Serrano",
-    "auditoría de marca médica Turó Park",
-    "desarrollo activos digitales de alta conversión",
-    "diferenciación competitiva sector estético lujo",
+    "marketing médico Marbella",
+    "diseño web medicina estética Pedralbes",
+    "agencia marketing Calle Larios",
+
+    // Conceptos de Ingeniería Visual (Tu marca)
+    "consultoría autoridad de marca médica",
+    "ingeniería visual clínicas estéticas",
     "UtiLiX Studio consultoría estratégica",
-    "marketing clínica estética Serrano", "diseño web lujo Turó Park", 
-    "branding médico La Zagaleta", "marketing estético Abando Bilbao", 
-    "sustituir instagram por web médica", "autoridad digital médicos estética",
-    "rediseño web clínica estética de lujo", "captar pacientes estética premium",
-    "UtiLiX Studio", "Ingeniería Visual clínicas", "marketing médico Marbella",
-    "diseño web medicina estética Pedralbes", "agencia marketing Calle Larios"
+    "UtiLiX Studio", 
+    "Ingeniería Visual clínicas",
+    "desarrollo activos digitales de alta conversión",
+    "captación pacientes alto valor Madrid",
+    "rediseño web clínica estética de lujo",
+    "protocolo de autoridad médica digital",
+    "marketing de resultados para clínicas élite"
   ],
 
   authors: [{ name: "UtiLiX Studio" }],  
@@ -46,7 +74,7 @@ export const metadata: Metadata = {
         url: "/og-image-luxury.jpg",
         width: 1200,
         height: 630,
-        alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico",
+        alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico para Médicos",
       },
     ],
   },
@@ -69,8 +97,7 @@ export default function CampanyaLayout({
       <link rel="dns-prefetch" href="https://www.googleadservices.com" />
       <link rel="dns-prefetch" href="https://www.google.com" />
 
-      {/* 2. VITAMINA DE RENDIMIENTO: Cambiamos afterInteractive por lazyOnload 
-          Esto hace que el script espere a que la web esté totalmente ociosa */}
+      {/* 2. VITAMINA DE RENDIMIENTO: Script optimizado para 97+ score */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-942717987"
         strategy="lazyOnload"
@@ -93,10 +120,10 @@ export default function CampanyaLayout({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca",
-            "image": "https://www.utilixstudio.com/logo-premium.png", // URL absoluta para mejor SEO
+            "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca Médica",
+            "image": "https://www.utilixstudio.com/logo-premium.png",
             "priceRange": "€€€",
-            "description": "Desarrollo de protocolos de autoridad de marca para el sector médico-estético. Especialistas en desmarcar clínicas de alto nivel frente a su competencia mediante ingeniería visual y sistemas avanzados de captación digital.",
+            "description": "Especialistas en diseño web y estrategias de autoridad para clínicas de medicina estética. Ayudamos a médicos de élite a captar pacientes premium mediante activos digitales de alto rendimiento.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Madrid",
@@ -133,11 +160,11 @@ export default function CampanyaLayout({
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Servicios de Elevación de Marca y Captación",
+              "name": "Servicios de Elevación de Marca Médica",
               "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transición de Perfiles Sociales a Ecosistemas de Autoridad" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de Diferenciación Competitiva Médica" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ingeniería Visual de Activos para Pacientes High-End" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de Ecosistemas de Autoridad para Médicos" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de Diferenciación para Clínicas Estéticas" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Captación de Pacientes High-End para Medicina Estética" } }
               ]
             }
           }),
