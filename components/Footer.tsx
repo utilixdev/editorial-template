@@ -15,6 +15,17 @@ export default function Footer() {
     presupuesto: "Auditoría Previa" // Mantenemos el campo interno para compatibilidad con el API
   });
 
+  // Función interna para notificar a Google Ads sin interrumpir la experiencia
+  const trackGoogleConversion = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-942717987',
+        'value': 1.0,
+        'currency': 'EUR'
+      });
+    }
+  };
+
   const handleSubmitEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.tel) return;
@@ -26,6 +37,7 @@ export default function Footer() {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
+        trackGoogleConversion(); // Disparo de conversión en éxito de formulario
         setStatus('success');
         setTimeout(() => setStatus('idle'), 5000);
       } else {
@@ -39,6 +51,9 @@ export default function Footer() {
 
   const handleWhatsAppDirect = () => {
     if (!formData.clinica || !formData.tel) return;
+    
+    trackGoogleConversion(); // Disparo de conversión en clic de WhatsApp prioritario
+
     const miTelefono = "34711556444";
     const mensaje = [
       `⚜️ *SOLICITUD DE AUDITORÍA PRIORITARIA*`,
@@ -71,7 +86,6 @@ export default function Footer() {
             "Definiendo el estándar visual para las clínicas que lideran el futuro del bienestar."
           </p>
           
-          {/* Micro-copy de Autoridad y Confianza */}
           <div className="mt-12 space-y-4">
             <p className="text-[10px] uppercase tracking-[0.3em] text-[#1A1A1A]/50 flex items-center gap-3">
               <span className="w-1 h-1 bg-[#B59E85] rounded-full"></span>
