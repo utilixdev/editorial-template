@@ -45,6 +45,10 @@ export const metadata: Metadata = {
 
   authors: [{ name: "UtiLiX Studio", url: "https://utilixstudio.com" }],
   
+  verification: {
+    google: "pKRmjZlmuwjKeM2gPFx329zx1kFqddb8MQyfWavqA0g",
+  },
+
   other: {
     "geo.region": "ES",
     "geo.placename": "Madrid, Barcelona, Marbella, Bilbao, Valencia, Málaga, San Sebastián",
