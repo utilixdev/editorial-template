@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Diseño Web Clínicas Estéticas de Lujo | Ingeniería Visual y Autoridad Médica High-End",
   description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
   
-  // KEYWORDS - Inyección masiva de términos de negocio y "bata blanca"
+  // KEYWORDS - Inyección masiva + Contraataque a Grupo Stamina y Marketing Médico
   keywords: [
     // Intención Directa (Lo que buscan cuando necesitan una web)
     "diseño web medicina estética de lujo",
@@ -28,6 +28,13 @@ export const metadata: Metadata = {
     "diferenciación competitiva sector estético lujo",
     "auditoría de marca médica Turó Park",
     
+    // Contraataque Estratégico (Infiltración en búsquedas de la competencia)
+    "alternativa a conseguirpacientes.com",
+    "branding médico de lujo vs marketing genérico",
+    "agencia de marketing médico boutique españa",
+    "ingeniería visual vs captación de pacientes masiva",
+    "marketing sanitario para perfiles de alto standing",
+
     // Ubicaciones de Poder (Filtro por zona de alto nivel)
     "marketing clínica estética Serrano", 
     "diseño web lujo Turó Park", 
