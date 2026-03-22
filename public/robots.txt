@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /campanya
+
+# Evitar que indexe archivos de configuración de Next.js
+Disallow: /_next/
+Disallow: /static/
+Disallow: /api/
+
+Sitemap: https://www.utilixstudio.com/sitemap.xml
