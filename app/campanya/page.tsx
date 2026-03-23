@@ -17,8 +17,8 @@ export default function CampanyaPage() {
 
   return (
     <main className="bg-[#FAF9F6] relative w-full overflow-hidden">
-      {/* H1 para SEO: Ahora más limpio */}
-      <h1 className="sr-only">UtiLiX Studio | Ingeniería Visual para Clínicas de Lujo</h1>
+      {/* H1 SEO: Enfoque de Liderazgo y Conversión Nacional */}
+      <h1 className="sr-only">UtiLiX Studio | Ingeniería de Autoridad y Activos Digitales para Clínicas de Élite en España</h1>
 
       <Hero 
         isLanding={true} 
@@ -49,35 +49,43 @@ export default function CampanyaPage() {
           className="text-center px-6 z-10"
         >
           <span className="text-[10px] uppercase tracking-[0.8em] mb-12 block text-[#B59E85] font-black">
-            UtiLiX Studio — Protocolo de Exclusividad
+            UtiLiX Studio — Liderazgo Digital Certificado
           </span>
 
           <h2 className="font-serif text-6xl md:text-9xl mb-16 tracking-tighter leading-[0.8] italic">
             El estándar <br />
-            <span className="opacity-40 not-italic">para la élite clínica.</span>
+            <span className="opacity-40 not-italic">en rentabilidad clínica.</span>
           </h2>
 
           <p className="max-w-2xl mx-auto mb-20 text-[11px] md:text-[13px] uppercase tracking-[0.35em] leading-[2.5] opacity-60 font-medium">
-            Diseñamos activos que legitiman sus honorarios y filtran su audiencia hacia el segmento de alto valor.
+            Implementamos infraestructuras digitales que legitiman su posición de mercado y filtran el tráfico para captar exclusivamente pacientes de alto valor estratégico.
           </p>
 
-          <button 
-            onClick={scrollToContacto}
-            className="group relative px-20 py-8 bg-[#B59E85] text-white text-[10px] uppercase tracking-[0.6em] font-black transition-all duration-700 hover:bg-white hover:text-[#1A1A1A] shadow-2xl shadow-[#B59E85]/10"
-          >
-            Solicitar Evaluación Privada
-          </button>
+          <div className="flex flex-col md:flex-row gap-6 justify-center">
+            <button 
+              onClick={scrollToContacto}
+              className="group relative px-12 py-8 bg-[#B59E85] text-white text-[10px] uppercase tracking-[0.6em] font-black transition-all duration-700 hover:bg-white hover:text-[#1A1A1A] shadow-2xl shadow-[#B59E85]/10"
+            >
+              Solicitar Auditoría de Autoridad
+            </button>
+            <button 
+              onClick={scrollToContacto}
+              className="group relative px-12 py-8 border border-[#B59E85]/30 text-white text-[10px] uppercase tracking-[0.6em] font-black transition-all duration-700 hover:border-[#B59E85] hover:bg-[#B59E85]/10"
+            >
+              Consultoría de Liderazgo
+            </button>
+          </div>
         </motion.div>
 
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
-          <span className="font-serif italic text-[30vw]">Prestige</span>
+          <span className="font-serif italic text-[30vw]">Leadership</span>
         </div>
       </section>
 
-      {/* FOOTER SEO: Separado del flujo de motion para evitar bloqueos */}
+      {/* FOOTER SEO NACIONAL: Cobertura de Autoridad en España */}
       <aside className="bg-[#FAF9F6] py-8 text-center px-6 border-t border-black/5">
         <p className="max-w-5xl mx-auto text-[8px] uppercase tracking-[0.1em] opacity-40 leading-relaxed">
-          Serrano · Almagro · El Viso · La Moraleja · Turó Park · Pedralbes · Passeig de Gràcia · Sant Cugat · La Zagaleta · Sierra Blanca · Puerto Banús · Abando · Paseo de la Concha · Colón · Eixample · Larios · Limonar · Av. Europa.
+          Estrategia Digital para Clínicas en: Madrid · Barcelona · Valencia · Sevilla · Bilbao · Málaga · Zaragoza · Marbella · San Sebastián · Palma de Mallorca · Valladolid · Alicante · Murcia · La Coruña · Santander · Granada · Córdoba · Salamanca · Pozuelo · Sant Cugat.
         </p>
       </aside>
 

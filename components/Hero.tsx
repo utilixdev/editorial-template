@@ -42,7 +42,7 @@ export default function Hero({
       >
         <img 
           src="/bg.jpg" 
-          alt="Atmósfera de lujo y autoridad visual - UtiLiX Studio"
+          alt="Ingeniería de Autoridad y Conversión Digital - UtiLiX Studio"
           {...({ fetchPriority: "high" } as any)} 
           className="w-full h-full object-cover object-[70%_center] grayscale-[0.5] opacity-60"
         />
@@ -75,7 +75,7 @@ export default function Hero({
                 className="mb-4 md:mb-6"
               >
                 <h2 className="text-[9px] md:text-[11px] uppercase tracking-[0.35em] text-[#B59E85] font-black leading-relaxed max-w-md">
-                  Ingeniería visual para clínicas que deciden atraer pacientes de alto valor, no volumen.
+                  Ingeniería de autoridad para clínicas que lideran su sector. Atrae pacientes de alto valor, no volumen.
                 </h2>
               </motion.div>
             )}
@@ -87,14 +87,14 @@ export default function Hero({
               className="font-serif text-[13vw] md:text-[7vw] leading-[0.85] tracking-[-0.05em] flex flex-col"
             >
               <span className="text-[#B59E85] italic font-light">
-                {isLanding ? "Prestigio Clínico" : "Elegancia"}
+                {isLanding ? "Autoridad Médica" : "Liderazgo"}
               </span>
 
               <motion.span 
                 style={{ x: useTransform(springX, (v) => v * -1.5) }}
                 className="text-[#1A1A1A] self-start mt-2"
               >
-                {isLanding ? "Autoridad Digital." : "Clínica."}
+                {isLanding ? "Activos Digitales." : "Estratégico."}
               </motion.span>
             </motion.h1>
           </div>
@@ -108,14 +108,14 @@ export default function Hero({
           >
             <p className="text-[#1A1A1A] text-[9px] md:text-[11px] leading-[2.4] uppercase tracking-[0.35em] font-bold">
               {isLanding 
-                ? "Si su clínica es premium, su presencia digital también debe serlo. Diseñamos ecosistemas de autoridad que proyectan distinción y atraen al paciente más cualificado del mercado."
-                : "Donde la precisión científica se encuentra con la armonía visual absoluta."
+                ? "Si su praxis médica es de excelencia, su activo digital debe certificarlo. Diseñamos ecosistemas de autoridad que legitiman sus honorarios y atraen al paciente más cualificado de España."
+                : "Donde el rigor científico se encuentra con la arquitectura estratégica absoluta."
               }
             </p>
           </motion.div>
         </div>
 
-        {/* BOTÓN VITAMINADO: Con Aria-Label para subir Accesibilidad al 100 */}
+        {/* BOTÓN VITAMINADO */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export default function Hero({
         >
           <button 
             type="button"
-            aria-label={isLanding ? "Solicitar Auditoría de Autoridad" : "Agendar Consulta Directa"}
+            aria-label={isLanding ? "Solicitar Auditoría de Autoridad Gratuita" : "Agendar Consulta de Estrategia"}
             onClick={(e) => {
               e.stopPropagation();
               if (isLanding && onOpenPopup) onOpenPopup();
@@ -137,19 +137,19 @@ export default function Hero({
               <div className="absolute inset-0 bg-[#B59E85] translate-y-full group-hover:translate-y-0 transition-transform duration-[1000ms] ease-[0.22,1,0.36,1]" />
               
               <span className="relative z-10 text-[7px] md:text-[10px] uppercase tracking-[0.5em] font-black text-[#1A1A1A] group-hover:text-white transition-colors duration-700 text-center leading-tight px-4">
-                {isLanding ? "Solicitar Auditoría Privada" : "Agendar Consulta"}
+                {isLanding ? "Solicitar Auditoría de Autoridad" : "Agendar Estrategia"}
               </span>
             </div>
 
             <span className="text-[6px] md:text-[7px] uppercase tracking-[0.5em] mt-5 opacity-20 font-bold group-hover:opacity-60 transition-opacity duration-1000">
-              Admission Reserved
+              Spain Selection Only
             </span>
           </button>
         </motion.div>
       </div>
 
       <div className="absolute bottom-16 left-[-5%] font-serif italic text-[14vw] text-[#1A1A1A]/[0.02] pointer-events-none select-none z-0">
-        Prestige
+        Authority
       </div>
 
       <div className="absolute bottom-6 left-6 md:left-24 h-12 w-[1px] bg-[#1A1A1A]/10 overflow-hidden z-20">

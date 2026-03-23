@@ -4,11 +4,11 @@ import { motion } from "framer-motion"
 
 export default function ClinicTransformationAudit() {
   const problems = [
-    "Plantillas genéricas",
-    "Fotografía no profesional",
-    "Estructura SEO débil",
-    "Jerarquía visual confusa",
-    "Experiencia móvil deficiente"
+    "Invisibilidad en búsquedas locales y nacionales",
+    "Falta de legitimación para honorarios altos",
+    "Estructura de conversión obsoleta",
+    "Fuga de pacientes hacia la competencia",
+    "Dependencia crítica de redes sociales volátiles"
   ]
 
   return (
@@ -31,13 +31,12 @@ export default function ClinicTransformationAudit() {
               whileInView={{ opacity: 1 }}
               className="text-[10px] uppercase tracking-[0.4em] text-[#B59E85] font-bold"
             >
-              Diagnóstico Digital
+              Diagnóstico Estratégico
             </motion.span>
 
             <h2 className="font-serif text-5xl md:text-8xl tracking-tighter leading-[0.85] text-[#1A1A1A] mt-6">
-              ¿Por qué muchas <br/>
-              webs de clínicas <br/>
-              <span className="italic opacity-40 text-[0.9em]">no convierten?</span>
+              ¿Por qué su clínica <br/>
+              <span className="italic opacity-40 text-[0.9em]">NO es el referente?</span>
             </h2>
           </div>
 
@@ -68,7 +67,7 @@ export default function ClinicTransformationAudit() {
               className="mt-10 p-6 bg-white/40 border border-[#1A1A1A]/5 backdrop-blur-sm"
             >
               <p className="text-[11px] uppercase tracking-[0.3em] leading-[2] text-[#1A1A1A]/60 font-medium">
-                CUANDO UNA CLÍNICA PROYECTA UNA PRESENCIA DIGITAL DÉBIL, LA PERCEPCIÓN DE AUTORIDAD DESAPARECE. Y CON ELLA, LOS PACIENTES QUE BUSCAN UN ESTÁNDAR MÁS ALTO.
+                CUANDO UNA CLÍNICA PROYECTA UNA PRESENCIA DIGITAL GENÉRICA, PIERDE EL CONTROL DE SUS PRECIOS. LA AUTORIDAD DIGITAL ES EL ÚNICO CAMINO HACIA LA RENTABILIDAD HIGH-END.
               </p>
             </motion.div>
           </div>
@@ -84,35 +83,25 @@ export default function ClinicTransformationAudit() {
         >
           <div className="mb-12 text-center w-full">
             <span className="text-[9px] uppercase tracking-[0.5em] text-[#B59E85] mb-4 block font-black">
-              El Estándar Utilix
+              Protocolo de Autoridad Nacional
             </span>
             <h3 className="font-serif text-[28px] md:text-[48px] leading-[1.1] text-[#1A1A1A] italic max-w-3xl mx-auto">
-              Convertimos el rigor clínico en una presencia digital que transmite autoridad.
+              Convertimos su rigor médico en un activo digital de alta conversión que domina el mercado.
             </h3>
           </div>
 
-          {/* CONTENEDOR DE IMAGEN AJUSTADO */}
+          {/* CONTENEDOR DE IMAGEN */}
           <div className="relative group w-full max-w-5xl mx-auto">
-            {/* CAMBIO CLAVE: 
-                - Quitamos aspect-video para que el contenedor se adapte a la imagen
-                - bg-[#1A1A1A] por si la imagen tiene transparencias
-            */}
             <div className="relative bg-[#1A1A1A] rounded-xl overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] border border-white/10">
               <img 
                 src="/after.jpg?v=4" 
-                alt="Utilix Studio Premium Result"
-                /* CAMBIO CLAVE: 
-                    - 'w-full h-auto' y quitar 'object-cover' asegura que la imagen se vea INTEGRAL 
-                    - 'group-hover:scale-[1.02]' un zoom mucho más sutil para no comerse los bordes
-                */
+                alt="UtiLiX Studio - Activo de Autoridad Médica"
                 className="w-full h-auto block opacity-95 transition-transform duration-700 group-hover:scale-[1.01]"
               />
-              
-              {/* Overlay de Reflejo Cristal Sutil */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-30 pointer-events-none" />
             </div>
 
-            {/* DETALLES DE AUTORÍA MINIMALISTAS */}
+            {/* DETALLES DE AUTORÍA */}
             <div className="mt-6 flex justify-between items-center px-2">
                 <div className="flex gap-12 md:gap-12">
                   <div className="flex flex-col">
@@ -121,10 +110,10 @@ export default function ClinicTransformationAudit() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[5px] md:text-[6px] uppercase tracking-[0.3em] text-[#1A1A1A]/40">Estado</span>
-                    <span className="text-[6px] md:text-[8px] uppercase tracking-[0.2em] font-bold text-[#B59E85]">Ejecutado</span>
+                    <span className="text-[6px] md:text-[8px] uppercase tracking-[0.2em] font-bold text-[#B59E85]">Liderazgo Consolidado</span>
                   </div>
                 </div>
-                <p className="text-[8px] md:text-[10px] font-serif italic text-[#B59E85] text-base md:text-xl opacity-80">UtilixStudio ©</p>
+                <p className="text-[8px] md:text-[10px] font-serif italic text-[#B59E85] text-base md:text-xl opacity-80">UtiLiX Studio — Spain</p>
             </div>
           </div>
         </motion.div>

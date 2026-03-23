@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 const concepts = [
   {
     id: "01",
-    title: "Minimalismo Clínico",
-    description: "Arquitectura visual basada en espacio, jerarquía tipográfica y claridad médica inmediata.",
-    tag: "ESTÉTICA EDITORIAL",
+    title: "Diseño de Autoridad",
+    description: "Arquitectura visual de alto impacto diseñada para certificar su rigor médico y legitimar sus honorarios profesionales de forma inmediata.",
+    tag: "ESTRATEGIA VISUAL",
     direction: -50,
     align: "start"
   },
   {
     id: "02",
-    title: "Fricción Cero (iOS)",
-    description: "Ingeniería UX optimizada para dispositivos premium y navegación sin interrupciones.",
+    title: "Fricción Cero (Premium)",
+    description: "Ingeniería de navegación optimizada para el perfil de paciente de alto valor, eliminando cualquier barrera en la toma de decisiones.",
     tag: "INGENIERÍA UX",
     direction: 50,
     align: "end"
   },
   {
     id: "03",
-    title: "Conversión de Prestigio",
-    description: "Flujos de contacto diseñados para pacientes de alto valor y consultas cualificadas.",
-    tag: "ESTRATEGIA",
+    title: "Conversión High-End",
+    description: "Sistemas de captación diseñados para filtrar volumen y priorizar consultas cualificadas de alta rentabilidad para su clínica.",
+    tag: "RESULTADOS",
     direction: -50,
     align: "start"
   }
@@ -45,7 +45,7 @@ export default function VisionConcepts() {
           </span>
 
           <h2 className="font-serif text-6xl md:text-8xl text-[#1A1A1A] tracking-tighter leading-none italic">
-            Conceptos de <span className="opacity-30 not-italic">Visión.</span>
+            Pilares de <span className="opacity-30 not-italic">Autoridad.</span>
           </h2>
         </motion.div>
 

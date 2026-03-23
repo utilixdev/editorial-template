@@ -2,78 +2,77 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  // TÍTULO Y DESCRIPCIÓN DE ALTO NIVEL - Vitaminado con intención de búsqueda real
-  title: "Diseño Web Clínicas Estéticas de Lujo | Ingeniería Visual y Autoridad Médica High-End",
-  description: "Especialistas en el desarrollo de ecosistemas digitales para clínicas de medicina estética de élite. Transformamos la presencia volátil de Instagram en activos de autoridad de marca que eliminan la competencia y optimizan la captación de pacientes de alto valor adquisitivo.",
+  // TÍTULO Y DESCRIPCIÓN: Ingeniería de estatus y conversión directa
+  title: "Diseño Web Clínicas Estéticas | Estrategia de Autoridad y Captación High-End España",
+  description: "Especialistas en el desarrollo de activos digitales de alto rendimiento para clínicas de medicina estética y cirugía plástica. Transformamos sitios web en herramientas de autoridad que legitiman sus honorarios y optimizan la captación de pacientes de alto valor adquisitivo en toda España.",
   
-  // KEYWORDS - Inyección masiva + Contraataque a Grupo Stamina y Marketing Médico
+  // KEYWORDS: Matriz de 3 niveles (Intención, Ubicación de Poder y Competencia)
   keywords: [
-    // Intención Directa (Lo que buscan cuando necesitan una web)
-    "diseño web medicina estética de lujo",
+    // Nivel 1: Intención de Negocio y Autoridad
+    "diseño web medicina estética españa",
     "mejor agencia marketing médico estética",
     "crear página web para clínica estética",
-    "especialistas en branding para médicos",
-    "marketing para cirujanos plásticos madrid",
+    "marketing para cirujanos plásticos españa",
     "agencia diseño web premium para doctores",
-    "desarrollo web sector estético barcelona",
+    "especialistas en branding para médicos",
+    "consultoría de conversión para clínicas",
+    "diseño web médico alto rendimiento",
     
-    // El Lenguaje del Doctor (Problema/Solución)
+    // Nivel 2: Problema/Solución (Pain Points del Director Médico)
     "cómo captar pacientes de alto valor estética",
-    "posicionamiento seo para clínicas médicas",
-    "exclusividad digital para médicos estética",
+    "posicionamiento seo clínicas estéticas españa",
     "autoridad digital médicos estética",
     "sustituir instagram por web médica",
     "captar pacientes estética premium",
-    "atraer pacientes medicina estética lujo",
-    "diferenciación competitiva sector estético lujo",
-    "auditoría de marca médica Turó Park",
+    "aumentar rentabilidad clínica estética",
+    "diferenciación competitiva sector médico",
+    "protocolo de autoridad médica digital",
+    "marketing de resultados para clínicas",
+    "auditoría de activos digitales médicos",
+    "legitimar honorarios médicos online",
     
-    // Contraataque Estratégico (Infiltración en búsquedas de la competencia)
-    "alternativa a conseguirpacientes.com",
-    "branding médico de lujo vs marketing genérico",
-    "agencia de marketing médico boutique españa",
-    "ingeniería visual vs captación de pacientes masiva",
-    "marketing sanitario para perfiles de alto standing",
-
-    // Ubicaciones de Poder (Filtro por zona de alto nivel)
-    "marketing clínica estética Serrano", 
-    "diseño web lujo Turó Park", 
-    "branding médico La Zagaleta", 
-    "marketing estético Abando Bilbao", 
-    "clínica estética Calle Larios autoridad",
-    "estrategia digital sector lujo Barcelona",
-    "branding médico exclusivo Marbella",
-    "digitalización clínicas medicina estética Serrano",
+    // Nivel 3: Blindaje Geográfico (Zonas de Alta Renta)
+    "marketing clínica estética Madrid", 
+    "diseño web médico Barcelona", 
+    "marketing médico Valencia", 
+    "branding clínico Sevilla",
+    "marketing médico Bilbao",
+    "marketing clínica estética Málaga",
+    "diseño web clínicas Zaragoza",
     "marketing médico Marbella",
-    "diseño web medicina estética Pedralbes",
-    "agencia marketing Calle Larios",
+    "agencia marketing médico San Sebastián",
+    "branding médico exclusivo Madrid Serrano",
+    "estrategia digital clínicas Barcelona Pedralbes",
+    "marketing médico Pozuelo de Alarcón",
+    "diseño web clínico Sant Cugat del Vallès",
+    "marketing médico Milla de Oro Marbella",
+    "posicionamiento seo médicos Palma de Mallorca",
 
-    // Conceptos de Ingeniería Visual (Tu marca)
-    "consultoría autoridad de marca médica",
-    "ingeniería visual clínicas estéticas",
-    "UtiLiX Studio consultoría estratégica",
+    // Nivel 4: Contraataque de Marca y Términos de Nicho
+    "alternativa a conseguirpacientes.com",
+    "branding médico de autoridad vs marketing genérico",
+    "agencia de marketing médico boutique españa",
+    "ingeniería visual vs captación masiva",
     "UtiLiX Studio", 
     "Ingeniería Visual clínicas",
-    "desarrollo activos digitales de alta conversión",
-    "captación pacientes alto valor Madrid",
-    "rediseño web clínica estética de lujo",
-    "protocolo de autoridad médica digital",
-    "marketing de resultados para clínicas élite"
+    "rediseño web clínica estética de autoridad",
+    "estándar de excelencia digital médica"
   ],
 
   authors: [{ name: "UtiLiX Studio" }],  
   
   other: {
     "geo.region": "ES",
-    "geo.placename": "Madrid Serrano, Barcelona Turó Park, Marbella Zagaleta, Bilbao Abando, Málaga Larios, Valencia Colón",
-    "geo.position": "40.4259;-3.6847",
-    "ICBM": "40.4259, -3.6847",
+    "geo.placename": "España, Madrid, Barcelona, Valencia, Sevilla, Bilbao, Málaga, Zaragoza, Marbella, San Sebastián, Palma",
+    "geo.position": "40.4168;-3.7038",
+    "ICBM": "40.4168, -3.7038",
   },
 
   openGraph: {
-    title: "Ingeniería Visual y Autoridad de Marca | Transición de Redes Sociales a Activos Médicos de Alto Rendimiento",
-    description: "Sustituimos la dependencia social por arquitecturas digitales de alto impacto. Blindaje de marca y captación estratégica en zonas de alto valor.",
+    title: "Estrategia de Autoridad y Activos Digitales | UtiLiX Studio España",
+    description: "Sustituimos la dependencia de redes sociales por infraestructuras de autoridad que blindan su marca y atraen pacientes de alto valor adquisitivo.",
     siteName: "UtiLiX Studio",
+    url: "https://utilix.es",
     locale: "es_ES",
     type: "website",
     images: [
@@ -81,7 +80,7 @@ export const metadata: Metadata = {
         url: "/og-image-luxury.jpg",
         width: 1200,
         height: 630,
-        alt: "UtiLiX Studio - Consultoría de Autoridad y Diseño Estratégico para Médicos",
+        alt: "UtiLiX Studio - Ingeniería de Autoridad para Clínicas de Alto Rendimiento",
       },
     ],
   },
@@ -89,6 +88,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -99,17 +105,18 @@ export default function CampanyaLayout({
 }) {
   return (
     <>
-      {/* 1. VITAMINA DE RENDIMIENTO: Pre-conexión a dominios de Google */}
+      {/* RENDIMIENTO Y CONEXIONES PRIORITARIAS */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.googleadservices.com" />
       <link rel="dns-prefetch" href="https://www.google.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-      {/* 2. VITAMINA DE RENDIMIENTO: Script optimizado para 97+ score */}
+      {/* CONFIGURACIÓN GOOGLE ADS & ANALYTICS */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-942717987"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
-      <Script id="google-ads-tag" strategy="lazyOnload">
+      <Script id="google-ads-tag" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -121,57 +128,50 @@ export default function CampanyaLayout({
         `}
       </Script>
 
+      {/* SCHEMA.ORG: Datos Estructurados de Autoridad Nacional */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "UtiLiX Studio - Ingeniería Visual y Estrategia de Marca Médica",
+            "name": "UtiLiX Studio - Ingeniería de Autoridad y Activos Médicos",
             "image": "https://www.utilixstudio.com/logo-premium.png",
+            "url": "https://utilix.es",
             "priceRange": "€€€",
-            "description": "Especialistas en diseño web y estrategias de autoridad para clínicas de medicina estética. Ayudamos a médicos de élite a captar pacientes premium mediante activos digitales de alto rendimiento.",
+            "description": "Consultoría de alto nivel especializada en el diseño de activos digitales de autoridad para clínicas estéticas de lujo y centros médicos premium en España.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Madrid",
-              "addressRegion": "Madrid",
+              "addressRegion": "Comunidad de Madrid",
               "addressCountry": "ES"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.4168,
+              "longitude": -3.7038
+            },
             "areaServed": [
-              { "@type": "Place", "name": "5km Abando, Bilbao" },
-              { "@type": "Place", "name": "5km Avenida de Europa, Pozuelo" },
-              { "@type": "Place", "name": "5km Calle Almagro, Madrid" },
-              { "@type": "Place", "name": "5km Calle Larios, Málaga" },
-              { "@type": "Place", "name": "5km Calle Serrano, Madrid" },
-              { "@type": "Place", "name": "5km Calle de Colón, Valencia" },
-              { "@type": "Place", "name": "5km Carrer de l'Eixample, Valencia" },
-              { "@type": "Place", "name": "5km Carrer de la Pau, València" },
-              { "@type": "Place", "name": "5km L'illa Diagonal, Barcelona" },
-              { "@type": "Place", "name": "5km El Limonar, Málaga" },
-              { "@type": "Place", "name": "5km El Viso, Madrid" },
-              { "@type": "Place", "name": "5km La Moraleja, Alcobendas" },
-              { "@type": "Place", "name": "3km La Zagaleta, Marbella" },
-              { "@type": "Place", "name": "5km Nueva Andalucía, Marbella" },
-              { "@type": "Place", "name": "5km Paseo de la Castellana, Madrid" },
-              { "@type": "Place", "name": "5km Paseo de la Concha, San Sebastián" },
-              { "@type": "Place", "name": "5km Passeig de Gràcia, Barcelona" },
-              { "@type": "Place", "name": "5km Pedralbes, Barcelona" },
-              { "@type": "Place", "name": "5km Puerto Banús, Marbella" },
-              { "@type": "Place", "name": "5km Rambla Nova, Tarragona" },
-              { "@type": "Place", "name": "5km S'Agaró, Girona" },
-              { "@type": "Place", "name": "5km Sant Cugat del Vallès, Barcelona" },
-              { "@type": "Place", "name": "5km Sarrià, Barcelona" },
-              { "@type": "Place", "name": "5km Sierra Blanca, Marbella" },
-              { "@type": "Place", "name": "5km Barrio de Salamanca (General Oráa), Madrid" },
-              { "@type": "Place", "name": "5km Turó Park (Pau Casals), Barcelona" }
+              { "@type": "City", "name": "Madrid" },
+              { "@type": "City", "name": "Barcelona" },
+              { "@type": "City", "name": "Valencia" },
+              { "@type": "City", "name": "Sevilla" },
+              { "@type": "City", "name": "Bilbao" },
+              { "@type": "City", "name": "Málaga" },
+              { "@type": "City", "name": "Zaragoza" },
+              { "@type": "City", "name": "Marbella" },
+              { "@type": "City", "name": "San Sebastián" },
+              { "@type": "City", "name": "Palma de Mallorca" },
+              { "@type": "City", "name": "Pozuelo de Alarcón" },
+              { "@type": "City", "name": "Sant Cugat del Vallès" }
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Servicios de Elevación de Marca Médica",
+              "name": "Servicios de Ingeniería Digital Médica",
               "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de Ecosistemas de Autoridad para Médicos" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de Diferenciación para Clínicas Estéticas" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Captación de Pacientes High-End para Medicina Estética" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de Activos de Autoridad Digital" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de Conversión Estratégica" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estrategia de Captación de Pacientes High-End" } }
               ]
             }
           }),

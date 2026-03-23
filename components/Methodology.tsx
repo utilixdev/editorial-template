@@ -7,17 +7,17 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
     {
       no: "01",
       title: "¿Qué hacemos exactamente?",
-      desc: "Diseñamos y desarrollamos presencias digitales de alto nivel para clínicas médicas y estéticas que quieren transmitir autoridad real. Analizamos su web actual, detectamos puntos de fricción y construimos una estructura visual y estratégica que eleva la percepción de su clínica desde el primer segundo."
+      desc: "Diseñamos y desarrollamos activos digitales de alto rendimiento para clínicas que buscan el liderazgo sectorial. Transformamos su web en una infraestructura de autoridad que legitima sus honorarios y optimiza la captación en toda España."
     },
     {
       no: "02",
       title: "¿Para quién es este sistema?",
-      desc: "Para clínicas privadas, centros médicos premium y especialistas que desean atraer pacientes de mayor valor. Profesionales que saben que su nivel clínico merece una presencia digital que refleje ese mismo estándar."
+      desc: "Para propietarios de clínicas y especialistas con visión de crecimiento que necesitan atraer pacientes de mayor rentabilidad. Profesionales que exigen que su presencia digital sea el reflejo exacto de su excelencia clínica."
     },
     {
       no: "03",
       title: "¿Qué resultado se obtiene?",
-      desc: "Una presencia digital diseñada para generar confianza inmediata, reforzar su posicionamiento profesional y atraer pacientes más cualificados. Su web deja de ser un simple escaparate y se convierte en una herramienta estratégica para su crecimiento."
+      desc: "Un ecosistema digital blindado para generar confianza inmediata y dominio de mercado. Su web deja de ser un gasto decorativo para convertirse en el motor principal de su captación estratégica y profesional."
     }
   ];
 
@@ -52,11 +52,11 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
             whileInView={{ opacity: 1 }}
             className="text-[#B59E85] text-[9px] uppercase tracking-[0.6em] mb-8 block font-medium"
           >
-            {isLanding ? "El camino hacia la distinción" : "Nuestro método"}
+            {isLanding ? "El camino hacia el liderazgo nacional" : "Nuestro método"}
           </motion.span>
           <h2 className="font-serif text-6xl md:text-8xl tracking-tighter leading-[0.85]">
             {isLanding ? (
-              <>El rigor técnico <br /> <span className="italic opacity-40">detrás del sistema.</span></>
+              <>El rigor técnico <br /> <span className="italic opacity-40">detrás del activo.</span></>
             ) : (
               <>La ciencia de la <br /> <span className="italic opacity-40">precisión absoluta.</span></>
             )}
@@ -82,7 +82,7 @@ export default function Methodology({ isLanding = false }: { isLanding?: boolean
                 {step.desc}
               </p>
               
-              {/* Línea decorativa de lujo: mantenemos tu animación original */}
+              {/* Línea decorativa de lujo */}
               <div className="mt-12 h-[1px] w-full bg-[#FAF9F6]/10 relative overflow-hidden">
                 <motion.div 
                   initial={{ width: "0%" }}
